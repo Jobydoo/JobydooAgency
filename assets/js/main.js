@@ -88,7 +88,7 @@
     });
   }
 
-  /* Contact form -> Formspree (delivers to jobthemaan@gmail.com) */
+  /* Contact form (no backend: shows confirmation + mailto fallback) */
   var form = document.getElementById("contactForm");
   if(form){
     form.addEventListener("submit", function(ev){
@@ -101,32 +101,13 @@
         alert("Merci de remplir tous les champs obligatoires.");
         return;
       }
-      var btn = form.querySelector("button[type=submit]");
-      if(btn){ btn.disabled = true; btn.textContent = "Envoi en cours…"; }
-      var action = form.action;
-      if(action.indexOf("REPLACE_ME") !== -1){
-        // No backend configured yet: open mail client to the owner's Gmail
-        var subject = encodeURIComponent("Nouvelle demande Jobydoo — " + (data.get("service")||"Contact"));
-        var body = encodeURIComponent("Nom: " + name + "\nEmail: " + email + "\nSociété: " + (data.get("company")||"—") + "\nService: " + (data.get("service")||"—") + "\n\nMessage:\n" + msg);
-        window.location.href = "mailto:jobthemaan@gmail.com?subject=" + subject + "&body=" + body;
-        var ok = document.getElementById("formOk");
-        if(ok){ ok.textContent = "Merci ! Votre messagerie vient de s'ouvrir avec votre demande pré-remplie. Sinon, écrivez-nous à jobthemaan@gmail.com."; ok.style.display = "block"; }
-        if(btn){ btn.disabled = false; btn.innerHTML = 'Envoyer ma demande <span class="arr">→</span>'; }
-        return;
-      }
-      fetch(action, {
-        method: "POST",
-        body: data,
-        headers: { "Accept": "application/json" }
-      }).then(function(r){
-        var ok = document.getElementById("formOk");
-        if(ok) ok.style.display = "block";
-        form.reset();
-        if(btn){ btn.disabled = false; btn.innerHTML = 'Envoyer ma demande <span class="arr">→</span>'; }
-      }).catch(function(){
-        alert("Une erreur est survenue. Écrivez-nous directement à jobthemaan@gmail.com");
-        if(btn){ btn.disabled = false; btn.innerHTML = 'Envoyer ma demande <span class="arr">→</span>'; }
-      });
+      var subject = encodeURIComponent("Nouvelle demande Jobydoo — " + (data.get("service")||"Contact"));
+      var body = encodeURIComponent("Nom: " + name + "\nEmail: " + email + "\nSociété: " + (data.get("company")||"—") + "\nService: " + (data.get("service")||"—") + "\n\nMessage:\n" + msg);
+      var ok = document.getElementById("formOk");
+      if(ok) ok.style.display = "block";
+      form.reset();
+      // open mail client as a real delivery path
+      window.location.href = "mailto:contact@jobydooagency.com?subject=" + subject + "&body=" + body;
     });
   }
 
