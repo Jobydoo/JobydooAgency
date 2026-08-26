@@ -3,23 +3,28 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Contact — Jobydoo Agency : devis gratuit pour votre projet web</title>
+<title>Contact — Jobydoo Agency : devis gratuit pour votre projet web, media buying & CRM</title>
 <meta name="description" content="Contactez Jobydoo Agency pour un devis gratuit : création de site web, media buying et CRM sur mesure au Maroc. Réponse rapide.">
-<link rel="canonical" href="https://www.jobydooagency.com/contact.html">
+<meta name="robots" content="index,follow">
 <meta property="og:title" content="Contact — Jobydoo Agency">
-<meta property="og:description" content="Devis gratuit pour votre projet web, ads et CRM.">
+<meta property="og:description" content="Devis gratuit pour votre projet web, media buying et CRM sur mesure au Maroc.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.jobydooagency.com/contact.html">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="canonical" href="https://www.jobydooagency.com/contact.html">
 <link rel="icon" type="image/png" href="assets/img/favicon.png">
 <link rel="apple-touch-icon" href="assets/img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-<header class="header">
+
+<!-- HEADER -->
+<header class="header" id="header">
   <div class="container nav">
     <a class="brand" href="index.html"><span class="logo">J</span> Jobydoo<span style="color:var(--amber)">.</span></a>
+    <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
     <ul class="nav-links">
       <li><a href="index.html">Accueil</a></li>
       <li><a href="creation-site-web.html">Création de site web</a></li>
@@ -29,49 +34,55 @@
       <li><a href="a-propos.html">À propos</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
-    <div class="nav-cta"><a class="btn btn--primary" href="contact.html">Devis gratuit <span class="arr">→</span></a><button class="burger" aria-label="Menu"><span></span><span></span><span></span></button></div>
+    <div class="nav-cta"><a class="btn btn--ink" href="contact.html">Devis gratuit <span class="arr">→</span></a></div>
   </div>
 </header>
 
-<section class="hero" style="min-height:64vh">
+<!-- HERO -->
+<section class="hero" style="min-height:58vh">
   <div class="orb o1"></div><div class="orb o2"></div><div class="grid-bg"></div>
-  <div class="container hero-content">
+  <div class="container hero-content reveal" style="max-width:900px">
     <span class="eyebrow">Contact</span>
-    <h1>Parlons de <span class="hl">votre projet</span>.</h1>
-    <p class="sub">Décrivez-nous votre activité et vos objectifs. On revient vers vous avec une proposition claire, sans engagement.</p>
+    <h1>Parlons de votre <span class="hl">projet</span>.</h1>
+    <p class="sub">Dites-nous votre activité, vos tâches chronophages et vos objectifs. On revient vers vous avec une proposition claire, sans engagement.</p>
   </div>
 </section>
 
+<!-- CONTACT -->
 <section class="section section--light">
   <div class="container">
     <div class="contact-wrap">
       <div class="reveal">
         <span class="eyebrow">Écrivez-nous</span>
         <h2>Demandez un devis gratuit</h2>
-        <p class="lead">Tous les champs marqués d'un astérisque sont obligatoires. Votre demande ouvre aussi votre client de messagerie pour une réponse rapide.</p>
-        <form id="contactForm" novalidate>
+        <p class="lead">Remplissez le formulaire — vous recevez une réponse sous 24h ouvrées.</p>
+        <!-- FORMSPREE: remplacez FORM_ID par votre ID Formspree (ex: xgebkavd) -->
+        <form id="contactForm" action="https://formspree.io/f/FORM_ID" method="POST" class="reveal d1">
           <div class="form-grid">
-            <div class="field"><label>Nom *</label><input name="name" type="text" placeholder="Votre nom" required></div>
-            <div class="field"><label>Email *</label><input name="email" type="email" placeholder="vous@entreprise.com" required></div>
-            <div class="field"><label>Société</label><input name="company" type="text" placeholder="Nom de l'entreprise"></div>
-            <div class="field"><label>Service souhaité</label>
-              <select name="service">
-                <option>Création de site web</option>
-                <option>Media Buying</option>
-                <option>CRM sur mesure</option>
-                <option>Automatisation</option>
-                <option>Plusieurs / global</option>
-              </select>
-            </div>
-            <div class="field full"><label>Votre message *</label><textarea name="message" placeholder="Décrivez votre projet, vos tâches chronophages et vos objectifs…" required></textarea></div>
-            <div class="field full"><button class="btn btn--primary" type="submit">Envoyer ma demande <span class="arr">→</span></button></div>
+            <div class="field"><label>Nom *</label><input name="name" required placeholder="Votre nom"></div>
+            <div class="field"><label>Email *</label><input name="email" type="email" required placeholder="vous@entreprise.com"></div>
           </div>
-          <div class="ok-msg" id="formOk">Merci ! Votre messagerie vient de s'ouvrir avec votre demande pré-remplie. Sinon, écrivez-nous à contact@jobydooagency.com.</div>
+          <div class="field"><label>Société</label><input name="company" placeholder="Nom de l'entreprise"></div>
+          <div class="field"><label>Service souhaité</label>
+            <select name="service">
+              <option>Création de site web</option>
+              <option>Media Buying</option>
+              <option>CRM sur mesure</option>
+              <option>Automatisation</option>
+              <option>Autre / Global</option>
+            </select>
+          </div>
+          <div class="field"><label>Message *</label><textarea name="message" rows="5" required placeholder="Décrivez votre projet et vos objectifs…"></textarea></div>
+          <input type="hidden" name="_subject" value="Nouvelle demande Jobydoo Agency">
+          <input type="hidden" name="_to" value="Jobthemaan@gmail.com">
+          <button class="btn btn--primary" type="submit">Envoyer ma demande <span class="arr">→</span></button>
         </form>
+        <div class="ok-msg" id="formOk">✅ Merci ! Votre message a bien été envoyé. On vous répond très vite.</div>
+        <p class="form-note">En cliquant sur « Envoyer », vous acceptez d'être recontacté par Jobydoo Agency.</p>
       </div>
       <div class="reveal d2">
         <div class="info-item"><div class="ic">✉️</div><div><b>Email</b><span><a href="mailto:contact@jobydooagency.com" style="color:var(--ink)">contact@jobydooagency.com</a></span></div></div>
-        <div class="info-item"><div class="ic">📞</div><div><b>Téléphone</b><span><a href="tel:+212****3671" style="color:var(--ink)">+212 645 833 671</a></span></div></div>
+        <div class="info-item"><div class="ic">📞</div><div><b>Téléphone</b><span><a href="tel:+212645833671" style="color:var(--ink)">+212 645 833 671</a></span></div></div>
         <div class="info-item"><div class="ic">📍</div><div><b>Zone</b><span>Maroc (Casablanca, Rabat, Marrakech, partout)</span></div></div>
         <div class="info-item"><div class="ic">⏱️</div><div><b>Réponse</b><span>Sous 24h ouvrées</span></div></div>
       </div>
@@ -79,6 +90,7 @@
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
@@ -91,6 +103,7 @@
     <div class="footer-bottom"><span>© <span id="year">2026</span> Jobydoo Agency. Tous droits réservés.</span><span>Agence Web · Media Buying · CRM — Maroc</span></div>
   </div>
 </footer>
+
 <script src="assets/js/main.js"></script>
 </body>
 </html>
