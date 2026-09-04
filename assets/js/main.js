@@ -88,8 +88,7 @@
     });
   }
 
-  /* Contact form: posts to Formspree AND opens a pre-filled email to the owner
-     (guaranteed delivery even on Formspree free tier, which has no email forwarding) */
+  /* Contact form: POST to Formsubmit.co (HTML response, no JSON, delivers directly to Gmail) */
   var form = document.getElementById("contactForm");
   if(form){
     form.addEventListener("submit", function(ev){
@@ -105,26 +104,31 @@
       var btn = form.querySelector("button[type=submit]");
       if(btn){ btn.disabled = true; btn.textContent = "Envoi en cours…"; }
 
-      // 1) Best-effort background post to Formspree (stored in dashboard)
-      try {
-        fetch(form.action, {
-          method: "POST",
-          body: data,
-          headers: { "Accept": "application/json" }
-        }).catch(function(){});
-      } catch(e){}
-
-      // 2) Guaranteed delivery: open mail client pre-filled to owner Gmail
-      var subject = encodeURIComponent("Nouvelle demande Jobydoo — " + (data.get("service")||"Contact"));
-      var body = encodeURIComponent(
-        "Nom: " + name + "\nEmail: " + email + "\nSociété: " + (data.get("company")||"—") +
-        "\nService: " + (data.get("service")||"—") + "\n\nMessage:\n" + msg
-      );
-      window.location.href = "mailto:jobthemaan@gmail.com?subject=" + subject + "&body=" + body;
-
-      var ok = document.getElementById("formOk");
-      if(ok){ ok.textContent = "Merci ! Votre messagerie vient de s'ouvrir avec votre demande pré-remplie. Sinon, écrivez-nous directement à jobthemaan@gmail.com."; ok.style.display = "block"; }
-      if(btn){ btn.disabled = false; btn.innerHTML = 'Envoyer ma demande <span class="arr">→</span>'; }
+      // 1) Post to Formsubmit.co (HTML response, no JSON, delivers directly to Gmail)
+      fetch(form.action, {
+        method: "POST",
+        body: data,
+        headers: { "Accept": "text/html" }
+      }).then(function(r){
+        // Formsubmit.co returns 200 + HTML thank-you page on success
+        if(!r.ok) throw new Error("HTTP " + r.status);
+        form.reset();
+        var ok = document.getElementById("formOk");
+        if(ok){ ok.style.display = "block"; ok.textContent = "Merci " + name.split(" ")[0] + " ! Votre demande a bien été envoyée. On vous répond sous 24h ouvrées."; }
+      }).catch(function(err){
+        // 2) Fallback: open mail client pre-filled to owner Gmail
+        var subject = encodeURIComponent("Nouvelle demande Jobydoo — " + (data.get("service")||"Contact"));
+        var body = encodeURIComponent(
+          "Nom: " + name + "\nEmail: " + email + "\nSociété: " + (data.get("company")||"—") +
+          "\nService: " + (data.get("service")||"—") + "\n\nMessage:\n" + msg
+        );
+        window.location.href = "mailto:jobthemaan@gmail.com?subject=" + subject + "&body=" + body;
+        var ok = document.getElementById("formOk");
+        if(ok){ ok.style.display = "block"; ok.style.color = "var(--amber)"; ok.textContent = "Le serveur n'a pas répondu. Votre messagerie vient de s'ouvrir avec votre demande pré-remplie — vérifiez bien que jobthemaan@gmail.com est bien le destinataire."; }
+        console.warn("Formsubmit.co error, fallback mailto:", err);
+      }).finally(function(){
+        if(btn){ btn.disabled = false; btn.innerHTML = 'Envoyer ma demande <span class="arr">→</span>'; }
+      });
     });
   }
 
