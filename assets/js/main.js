@@ -19,6 +19,7 @@
     burger.addEventListener("click", function(){
       navLinks.classList.toggle("open");
       burger.classList.toggle("active");
+      document.body.classList.toggle("no-scroll", navLinks.classList.contains("open"));
     });
     navLinks.querySelectorAll("a").forEach(function(a){
       a.addEventListener("click", function(){ navLinks.classList.remove("open"); });
@@ -174,3 +175,4 @@
     calc();
   }
 })();
+
