@@ -273,7 +273,6 @@ img{max-width:100%;display:block;height:auto}
   .nav-links.open{display:flex;transform:none}
   .nav-links a{font-size:.92rem;color:var(--text);white-space:normal}
   .nav-links a::after{display:none}
-  .nav-links:not(.open){display:none}
   .burger{display:flex}
   .nav-cta .btn--ghost{display:none}
   .nav-cta .btn--sm{display:none}
@@ -401,3 +400,4 @@ img{max-width:100%;display:block;height:auto}
 .seo-faq-q .plus.open{transform:rotate(45deg)}
 .seo-faq-a{display:none;padding:0 14px;color:var(--text-dim);font-size:.86rem;line-height:1.55;border-bottom:1px solid var(--border)}
 .seo-faq-a.open{display:block}
+
