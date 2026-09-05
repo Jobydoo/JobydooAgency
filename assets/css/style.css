@@ -273,6 +273,7 @@ img{max-width:100%;display:block;height:auto}
   .nav-links.open{transform:none}
   .nav-links a{font-size:.92rem;color:var(--text);white-space:normal}
   .nav-links a::after{display:none}
+  .nav-links:not(.open){display:none}
   .burger{display:flex}
   .nav-cta .btn--ghost{display:none}
   .nav-cta .btn--sm{display:none}
