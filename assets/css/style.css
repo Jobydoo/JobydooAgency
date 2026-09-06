@@ -30,6 +30,18 @@
   --ease:cubic-bezier(.22,.61,.36,1);
   --sans:"Plus Jakarta Sans","Inter","Segoe UI",system-ui,sans-serif;
 }
+.amber-glow{
+  box-shadow:0 0 0 4px rgba(255,107,53,.15),0 8px 24px -8px rgba(255,107,53,.4) !important;
+  background:var(--amber) !important;color:#fff !important;
+  transform:translateY(-2px) !important;
+}
+.amber-glow:hover{
+  background:#e85d28 !important;
+  box-shadow:0 0 0 4px rgba(255,107,53,.25),0 14px 32px -8px rgba(255,107,53,.55) !important;
+}
+.amber-text{color:var(--amber);font-weight:700}
+.amber-border{border-color:var(--amber-border)}
+.amber-bg{background:var(--amber-soft)}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-tap-highlight-color:transparent}
 body{
@@ -113,7 +125,7 @@ img{max-width:100%;display:block;height:auto}
 .card:hover .more .arr{transform:translateX(4px)}
 .quote{background:var(--bg-card);border:1px solid var(--border-light);border-radius:var(--radius);padding:22px;transition:transform .3s,var(--border-light),box-shadow .3s}
 .quote:hover{border-color:var(--accent-border);box-shadow:var(--shadow-sm);transform:translateY(-2px)}
-.quote .mark{font-size:2.8rem;color:var(--accent);line-height:.8;margin-bottom:8px;font-family:var(--sans)}
+.quote .mark{font-size:2.8rem;color:var(--amber);line-height:.8;margin-bottom:8px;font-family:var(--sans)}
 .quote p{color:var(--text-dim);font-size:.94rem;margin:0 0 14px;line-height:1.65;font-style:italic}
 .quote .who{display:flex;align-items:center;gap:10px}
 .quote .av{width:36px;height:36px;border-radius:50%;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-weight:800;font-size:.88rem;flex:0 0 auto}
