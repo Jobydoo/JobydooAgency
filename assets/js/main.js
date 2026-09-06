@@ -16,14 +16,50 @@
   var burger = document.querySelector(".burger");
   var navLinks = document.querySelector(".nav-links");
   if(burger && navLinks){
-    burger.addEventListener("click", function(){
-      navLinks.classList.toggle("open");
-      burger.classList.toggle("active");
-      document.body.classList.toggle("no-scroll", navLinks.classList.contains("open"));
+    // Inject mobile CTA button if not present in drawer
+    if(!navLinks.querySelector(".mobile-menu-cta")){
+      var ctaLi = document.createElement("li");
+      ctaLi.className = "mobile-menu-cta";
+      ctaLi.innerHTML = '<a class="btn btn--primary" href="contact.html">Devis gratuit <span class="arr">→</span></a>';
+      navLinks.appendChild(ctaLi);
+    }
+
+    function closeMenu(){
+      navLinks.classList.remove("open");
+      burger.classList.remove("active");
+      burger.setAttribute("aria-expanded", "false");
+      document.body.classList.remove("no-scroll");
+    }
+
+    function toggleMenu(){
+      var isOpen = navLinks.classList.toggle("open");
+      burger.classList.toggle("active", isOpen);
+      burger.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      document.body.classList.toggle("no-scroll", isOpen);
+    }
+
+    burger.addEventListener("click", function(e){
+      e.stopPropagation();
+      toggleMenu();
     });
+
     navLinks.querySelectorAll("a").forEach(function(a){
-      a.addEventListener("click", function(){ navLinks.classList.remove("open"); });
+      a.addEventListener("click", function(){
+        closeMenu();
+      });
     });
+
+    document.addEventListener("keydown", function(e){
+      if(e.key === "Escape" && navLinks.classList.contains("open")){
+        closeMenu();
+      }
+    });
+
+    window.addEventListener("resize", function(){
+      if(window.innerWidth > 960 && navLinks.classList.contains("open")){
+        closeMenu();
+      }
+    }, {passive:true});
   }
 
   /* Scroll reveal (with clip-path image reveal) */
