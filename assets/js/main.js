@@ -210,5 +210,207 @@
     [ca,hours,adb].forEach(function(el){ el.addEventListener("input", calc); });
     calc();
   }
+
+  /* Brand normalization: ensure no gap before dot */
+  document.querySelectorAll(".brand").forEach(function(b){
+    if(!b.querySelector(".brand-name")){
+      var logo = b.querySelector(".logo");
+      if(logo){
+        var nameSpan = document.createElement("span");
+        nameSpan.className = "brand-name";
+        nameSpan.innerHTML = 'Jobydoo<span class="brand-dot">.</span>';
+        b.innerHTML = "";
+        b.appendChild(logo);
+        b.appendChild(nameSpan);
+      }
+    }
+  });
+
+  /* ==================== Multi-language (FR / EN) ==================== */
+  var I18N = {
+    fr: {
+      "nav.home": "Accueil",
+      "nav.web": "Création de site web",
+      "nav.ads": "Media Buying",
+      "nav.crm": "CRM sur mesure",
+      "nav.apps": "Applications générales",
+      "nav.pricing": "Tarifs",
+      "nav.portfolio": "Portfolio",
+      "nav.about": "À propos",
+      "nav.contact": "Contact",
+      "nav.quote": 'Devis gratuit <span class="arr">→</span>',
+
+      "hero.eyebrow": "Agence Web Maroc · Marketing Agency Morocco · Digital Maroc",
+      "hero.h1": 'On construit votre <span class="hl">croissance digitale</span> pendant que vous gérez votre business.',
+      "hero.sub": "Jobydoo réunit <b>création de site web</b>, <b>media buying</b> et <b>CRM sur mesure</b> sous un même toit — agence web maroc et marketing agency morocco, pour automatiser vos tâches et réduire vos coûts.",
+      "hero.ctaPrimary": 'Démarrer mon projet <span class="arr">→</span>',
+      "hero.ctaSecondary": "Voir nos réalisations",
+      "hero.stat1": "projets livrés",
+      "hero.stat2": "coûts acquis en moins",
+      "hero.stat3": "clients accompagnés",
+      "hero.stat4": "support & automatisation",
+
+      "pillars.eyebrow": "Nos trois piliers",
+      "pillars.h2": "Une agence, trois métiers qui travaillent ensemble",
+      "pillars.lead": "Au lieu de jongler avec trois prestataires, vous avez un seul partenaire qui aligne votre site, vos campagnes et votre gestion client.",
+
+      "card1.title": "Création de site web",
+      "card1.desc": 'Sites vitrines, e-commerce et plateformes sur mesure. Design UX "in motion", responsive mobile, performances et SEO technique dès la base.',
+      "card1.more": 'Explorer <span class="arr">→</span>',
+
+      "card2.title": "Media Buying",
+      "card2.desc": "Google Ads, Meta Ads et retargeting. Nous baissons votre coût par acquisition et transformons votre trafic en clients réels.",
+      "card2.more": 'Explorer <span class="arr">→</span>',
+
+      "card3.title": "Création de CRM sur mesure",
+      "card3.desc": "Un CRM pensé pour VOTRE entreprise : pipeline commercial et automatisations pour suivre chaque lead sans outil disjoint.",
+      "card3.more": 'Explorer <span class="arr">→</span>',
+
+      "card4.title": "Applications générales",
+      "card4.desc": "Gestion de stock, gestion commerciale, outils métier et intégrations Sage 100 Cloud — des applications sur mesure pour automatiser vos processus.",
+      "card4.more": 'Explorer <span class="arr">→</span>',
+
+      "quotes.eyebrow": "Ce qu'on entend",
+      "quotes.h2": "« Enfin un prestataire qui pense à mon temps. »",
+      "quote1.text": "Mon site et mes campagnes enfin connectés. Je suis notifié dès qu'un lead arrive, sans ouvrir 5 outils.",
+      "quote2.text": "Le CRM fait le suivi à ma place. Mes commerciaux gagnent 10h par semaine.",
+
+      "cta.h2": "Construisons le site et les outils qui font grandir votre entreprise.",
+      "cta.p": "Parlons de vos tâches chronophages et de vos objectifs. Devis clair, sans engagement.",
+      "cta.btn": 'Demander un devis gratuit <span class="arr">→</span>',
+
+      "footer.desc": "Agence web au Maroc. Création de site web, media buying et CRM sur mesure, automatisés.",
+      "footer.services": "Services",
+      "footer.agency": "Agence",
+      "footer.rights": "Tous droits réservés.",
+      "footer.sub": "Agence Web · Media Buying · CRM — Maroc"
+    },
+    en: {
+      "nav.home": "Home",
+      "nav.web": "Website Creation",
+      "nav.ads": "Media Buying",
+      "nav.crm": "Custom CRM",
+      "nav.apps": "Custom Apps",
+      "nav.pricing": "Pricing",
+      "nav.portfolio": "Portfolio",
+      "nav.about": "About Us",
+      "nav.contact": "Contact",
+      "nav.quote": 'Free Quote <span class="arr">→</span>',
+
+      "hero.eyebrow": "Morocco Web Agency · Marketing Agency Morocco · Digital Growth",
+      "hero.h1": 'We build your <span class="hl">digital growth</span> while you run your business.',
+      "hero.sub": "Jobydoo brings <b>website creation</b>, <b>media buying</b> and <b>custom CRM</b> under one roof — automating your workflows and cutting your acquisition costs.",
+      "hero.ctaPrimary": 'Start My Project <span class="arr">→</span>',
+      "hero.ctaSecondary": "View Our Work",
+      "hero.stat1": "projects delivered",
+      "hero.stat2": "lower acquisition costs",
+      "hero.stat3": "clients supported",
+      "hero.stat4": "24/7 support & automation",
+
+      "pillars.eyebrow": "Our Three Pillars",
+      "pillars.h2": "One agency, three core disciplines working together",
+      "pillars.lead": "Instead of juggling multiple vendors, you get a single partner aligning your website, ad campaigns, and customer management.",
+
+      "card1.title": "Website Creation",
+      "card1.desc": 'Showcase websites, e-commerce, and custom platforms. Motion UX design, mobile responsiveness, fast performance, and technical SEO from day one.',
+      "card1.more": 'Explore <span class="arr">→</span>',
+
+      "card2.title": "Media Buying",
+      "card2.desc": "Google Ads, Meta Ads and retargeting. We lower your acquisition costs and turn your traffic into paying clients.",
+      "card2.more": 'Explore <span class="arr">→</span>',
+
+      "card3.title": "Custom CRM",
+      "card3.desc": "A CRM tailored to YOUR business: sales pipelines and automated follow-ups to track every lead without disconnected tools.",
+      "card3.more": 'Explore <span class="arr">→</span>',
+
+      "card4.title": "Custom Applications",
+      "card4.desc": "Inventory management, ERP tools, and Sage 100 Cloud integrations — bespoke software to automate your operations.",
+      "card4.more": 'Explore <span class="arr">→</span>',
+
+      "quotes.eyebrow": "What Clients Say",
+      "quotes.h2": "\"Finally a partner who values my time.\"",
+      "quote1.text": "My website and campaigns are finally synced. I get notified immediately when a lead arrives, without checking 5 different apps.",
+      "quote2.text": "The CRM automates our follow-ups. Our sales reps save 10 hours every week.",
+
+      "cta.h2": "Let's build the website and tools that grow your business.",
+      "cta.p": "Let's discuss your time-consuming bottlenecks and your growth goals. Clear, no-obligation quote.",
+      "cta.btn": 'Request a Free Quote <span class="arr">→</span>',
+
+      "footer.desc": "Web & Marketing Agency in Morocco. Website creation, media buying, and custom automated CRMs.",
+      "footer.services": "Services",
+      "footer.agency": "Agency",
+      "footer.rights": "All rights reserved.",
+      "footer.sub": "Web Agency · Media Buying · CRM — Morocco"
+    }
+  };
+
+  var currentLang = "fr";
+  try {
+    var urlParams = new URLSearchParams(window.location.search);
+    var pLang = urlParams.get("lang");
+    if(pLang === "en" || pLang === "fr"){
+      currentLang = pLang;
+      localStorage.setItem("jobydoo_lang", pLang);
+    } else {
+      currentLang = localStorage.getItem("jobydoo_lang") || "fr";
+    }
+  } catch(e){}
+
+  function applyLanguage(lang){
+    currentLang = lang;
+    try { localStorage.setItem("jobydoo_lang", lang); } catch(e){}
+    document.documentElement.lang = lang;
+
+    // Update all elements with data-i18n
+    document.querySelectorAll("[data-i18n]").forEach(function(el){
+      var key = el.getAttribute("data-i18n");
+      if(I18N[lang] && I18N[lang][key]){
+        el.innerHTML = I18N[lang][key];
+      }
+    });
+
+    // Update floating and header lang toggles
+    document.querySelectorAll(".lang-toggle, .lang-toggle-nav").forEach(function(btn){
+      if(lang === "en"){
+        btn.innerHTML = '<span class="globe">🌐</span> <span class="oth">FR</span> / <span class="cur">EN</span>';
+      } else {
+        btn.innerHTML = '<span class="globe">🌐</span> <span class="cur">FR</span> / <span class="oth">EN</span>';
+      }
+    });
+
+    // Update mobile drawer switch buttons
+    document.querySelectorAll(".mobile-lang-switch button").forEach(function(b){
+      b.classList.toggle("active", b.getAttribute("data-lang") === lang);
+    });
+  }
+
+  // Delegated click for any lang toggle buttons (floating, header, nav)
+  document.addEventListener("click", function(e){
+    var toggleBtn = e.target.closest(".lang-toggle, .lang-toggle-nav");
+    if(toggleBtn){
+      e.preventDefault();
+      applyLanguage(currentLang === "fr" ? "en" : "fr");
+    }
+  });
+
+  // Inject in mobile drawer if not present
+  if(navLinks && !navLinks.querySelector(".mobile-lang-switch")){
+    var langLi = document.createElement("li");
+    langLi.className = "mobile-lang-switch";
+    langLi.innerHTML = '<span class="label">🌐 Langue / Language:</span><div class="switch-btns"><button type="button" data-lang="fr"' + (currentLang === 'fr' ? ' class="active"' : '') + '>FR</button><button type="button" data-lang="en"' + (currentLang === 'en' ? ' class="active"' : '') + '>EN</button></div>';
+    var ctaEl = navLinks.querySelector(".mobile-menu-cta");
+    if(ctaEl) navLinks.insertBefore(langLi, ctaEl);
+    else navLinks.appendChild(langLi);
+
+    langLi.querySelectorAll("button").forEach(function(b){
+      b.addEventListener("click", function(ev){
+        ev.preventDefault();
+        applyLanguage(b.getAttribute("data-lang"));
+      });
+    });
+  }
+
+  // Initial apply
+  applyLanguage(currentLang);
 })();
 
