@@ -56,7 +56,7 @@
     });
 
     window.addEventListener("resize", function(){
-      if(window.innerWidth > 960 && navLinks.classList.contains("open")){
+      if(window.innerWidth > 1120 && navLinks.classList.contains("open")){
         closeMenu();
       }
     }, {passive:true});
