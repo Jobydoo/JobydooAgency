@@ -382,7 +382,33 @@
       "footer.services": "Services",
       "footer.agency": "Agence",
       "footer.rights": "Tous droits réservés.",
-      "footer.sub": "Agence Web · Media Buying · CRM — Maroc"
+      "footer.sub": "Agence Web · Media Buying · CRM — Maroc",
+
+      "portfolio.eyebrow": "Portfolio & Réalisations · Agence Web Maroc",
+      "portfolio.h1": 'Nos <span class="hl">réalisations</span>, des résultats mesurés.',
+      "portfolio.sub": "Découvrez nos sites web, campagnes publicitaires et outils CRM conçus pour propulser nos clients au Maroc et à l'international.",
+      "portfolio.stat1": "Clients & projets livrés",
+      "portfolio.stat2": "Croissance moyenne clients",
+      "portfolio.stat3": "Vitesse moyenne de chargement",
+      "portfolio.stat4": "Projets livrés dans les délais",
+      "portfolio.featEyebrow": "Étude de cas phare",
+      "portfolio.featTitle": "MoroccoDesertTrips.com — Vitrine, Expérience & Réservations Directes",
+      "portfolio.featDesc": "Conception d'une plateforme web ultra-rapide dédiée au tourisme du Sahara marocain : tunnel de réservation direct, optimisation SEO multilingue et relances automatiques par WhatsApp.",
+      "portfolio.featBtn": "Visiter moroccodeserttrips.com ↗",
+      "portfolio.filterAll": "Tous les projets",
+      "portfolio.filterTourism": "Tourisme & Voyage",
+      "portfolio.filterLuxury": "Luxe & VIP",
+      "portfolio.filterTech": "Tech & E-commerce",
+      "portfolio.filterCrm": "CRM & Automatisation",
+      "portfolio.filterB2b": "Services B2B",
+      "portfolio.searchPlaceholder": "Rechercher par client, expertise, mot-clé...",
+      "portfolio.gridEyebrow": "Projets & Partenaires",
+      "portfolio.gridTitle": "L'ensemble de nos clients accompagnés",
+      "portfolio.gridLead": "Filtrez par secteur d'activité ou utilisez la recherche instantanée pour explorer nos réalisations.",
+      "portfolio.visitBtn": "Visiter le site",
+      "portfolio.emptyTitle": "Aucun projet trouvé",
+      "portfolio.emptyDesc": "Aucun client ne correspond à votre recherche actuelle. Essayez d'autres termes ou réinitialisez vos filtres.",
+      "portfolio.emptyReset": "Réinitialiser les filtres"
     },
     en: {
       "nav.home": "Home",
@@ -538,7 +564,33 @@
       "footer.services": "Services",
       "footer.agency": "Agency",
       "footer.rights": "All rights reserved.",
-      "footer.sub": "Web Agency · Media Buying · CRM — Morocco"
+      "footer.sub": "Web Agency · Media Buying · CRM — Morocco",
+
+      "portfolio.eyebrow": "Portfolio & Case Studies · Morocco Web Agency",
+      "portfolio.h1": 'Our <span class="hl">projects</span>, measurable results.',
+      "portfolio.sub": "Explore our websites, ad campaigns, and custom CRMs engineered to scale our clients across Morocco and internationally.",
+      "portfolio.stat1": "Delivered projects & clients",
+      "portfolio.stat2": "Average client growth",
+      "portfolio.stat3": "Average page load speed",
+      "portfolio.stat4": "On-time delivery rate",
+      "portfolio.featEyebrow": "Flagship Case Study",
+      "portfolio.featTitle": "MoroccoDesertTrips.com — Web Showcase, UX & Direct Bookings",
+      "portfolio.featDesc": "Built an ultra-fast web platform dedicated to Moroccan Sahara tourism: direct booking funnel, multilingual SEO, and automated WhatsApp follow-ups.",
+      "portfolio.featBtn": "Visit moroccodeserttrips.com ↗",
+      "portfolio.filterAll": "All Projects",
+      "portfolio.filterTourism": "Tourism & Travel",
+      "portfolio.filterLuxury": "Luxury & VIP",
+      "portfolio.filterTech": "Tech & E-commerce",
+      "portfolio.filterCrm": "CRM & Automation",
+      "portfolio.filterB2b": "B2B Services",
+      "portfolio.searchPlaceholder": "Search by client, skill, location...",
+      "portfolio.gridEyebrow": "Projects & Partners",
+      "portfolio.gridTitle": "All Client Projects We Have Scaled",
+      "portfolio.gridLead": "Filter by industry sector or use instant search to explore our recent work.",
+      "portfolio.visitBtn": "Visit website",
+      "portfolio.emptyTitle": "No projects found",
+      "portfolio.emptyDesc": "No client matched your current search. Try another keyword or reset your filters.",
+      "portfolio.emptyReset": "Reset filters"
     }
   };
 
@@ -627,6 +679,88 @@
     wa.href = "https://wa.me/212645833671?text=" + encodeURIComponent(msg);
     wa.title = currentLang === "en" ? "Chat on WhatsApp (+212 645 833 671)" : "Discuter sur WhatsApp (+212 645 833 671)";
     wa.innerHTML = '<svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm.01 1.67c2.2 0 4.26.86 5.82 2.42a8.23 8.23 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24zm4.52 11.64c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.24-.75-.67-1.25-1.49-1.4-1.74-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.32-.02-.45-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.87.85-.87 2.08 0 1.22.89 2.41 1.02 2.58.13.17 1.76 2.68 4.26 3.76.6.26 1.06.41 1.42.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.11-.22-.18-.47-.3z"/></svg><span class="wa-text">WhatsApp</span>';
+  }
+
+  /* =====================================================================
+   * Portfolio Live Filter & Instant Search (0-latency Vanilla JS)
+   * ===================================================================== */
+  var portfolioGrid = document.querySelector(".client-grid");
+  var filterButtons = document.querySelectorAll(".filter-btn");
+  var searchInput = document.getElementById("portfolioSearch");
+  var countDisplay = document.getElementById("visibleCount");
+  var totalCountDisplay = document.getElementById("totalCount");
+  var emptyState = document.querySelector(".portfolio-empty");
+  var resetFiltersBtn = document.getElementById("resetFiltersBtn");
+
+  if(portfolioGrid && filterButtons.length){
+    var activeCategory = "all";
+    var currentSearch = "";
+    var cards = Array.from(portfolioGrid.querySelectorAll(".client-card"));
+
+    function updatePortfolioDisplay(){
+      var visibleCount = 0;
+      var query = currentSearch.toLowerCase().trim();
+
+      cards.forEach(function(card){
+        var cat = card.getAttribute("data-cat") || "";
+        var cats = cat.split(" ");
+        var cardText = (card.textContent || "").toLowerCase();
+
+        var matchesCat = (activeCategory === "all") || (cats.indexOf(activeCategory) !== -1);
+        var matchesSearch = !query || (cardText.indexOf(query) !== -1);
+
+        if(matchesCat && matchesSearch){
+          card.classList.remove("is-hidden");
+          visibleCount++;
+        } else {
+          card.classList.add("is-hidden");
+        }
+      });
+
+      if(countDisplay) countDisplay.textContent = visibleCount;
+      if(totalCountDisplay) totalCountDisplay.textContent = cards.length;
+
+      if(emptyState){
+        if(visibleCount === 0){
+          emptyState.classList.add("visible");
+        } else {
+          emptyState.classList.remove("visible");
+        }
+      }
+    }
+
+    filterButtons.forEach(function(btn){
+      btn.addEventListener("click", function(e){
+        e.preventDefault();
+        filterButtons.forEach(function(b){ b.classList.remove("active"); });
+        btn.classList.add("active");
+        activeCategory = btn.getAttribute("data-filter") || "all";
+        updatePortfolioDisplay();
+      });
+    });
+
+    if(searchInput){
+      searchInput.addEventListener("input", function(e){
+        currentSearch = e.target.value;
+        updatePortfolioDisplay();
+      });
+    }
+
+    if(resetFiltersBtn){
+      resetFiltersBtn.addEventListener("click", function(e){
+        e.preventDefault();
+        if(searchInput) searchInput.value = "";
+        currentSearch = "";
+        activeCategory = "all";
+        filterButtons.forEach(function(b){
+          b.classList.toggle("active", b.getAttribute("data-filter") === "all");
+        });
+        updatePortfolioDisplay();
+      });
+    }
+
+    // Initialize counts
+    updatePortfolioDisplay();
   }
 
   // Initial apply
