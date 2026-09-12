@@ -51,19 +51,20 @@
     <a class="brand" href="index.html"><span class="logo">J</span> Jobydoo<span style="color:var(--accent)">.</span></a>
     <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
     <ul class="nav-links">
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="creation-site-web.html">Création de site web</a></li>
-      <li><a href="media-buying.html">Media Buying</a></li>
-      <li><a href="creation-crm.html">CRM sur mesure</a></li>
-      <li><a href="crm-sur-mesure.html">CRM sur mesure</a></li>
-      <li><a href="applications-general.html">Applications générales</a></li>
-      <li><a href="agence-communication.html">Agence de communication</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="a-propos.html">À propos</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+      <li><a href="creation-site-web.html" data-i18n="nav.web">Création de site web</a></li>
+      <li><a href="media-buying.html" data-i18n="nav.ads">Media Buying</a></li>
+      <li><a href="creation-crm.html" class="active" data-i18n="nav.crm">CRM sur mesure</a></li>
+      <li><a href="applications-general.html" data-i18n="nav.apps">Applications générales</a></li>
+      <li><a href="agence-communication.html" data-i18n="nav.agency">Agence de communication</a></li>
+      <li><a href="pricing.html" data-i18n="nav.pricing">Tarifs</a></li>
+      <li><a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a></li>
+      <li><a href="a-propos.html" data-i18n="nav.about">À propos</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
     </ul>
     <div class="nav-cta">
-      <a class="btn btn--accent" href="contact.html">Devis gratuit <span class="arr">→</span></a>
+      <button class="lang-toggle" id="langToggle" title="Changer la langue / Change language" aria-label="Changer la langue"><span class="globe">🌐</span> <span class="cur">FR</span> / <span class="oth">EN</span></button>
+      <a class="btn btn--primary" href="contact.html" data-i18n="nav.quote">Devis gratuit <span class="arr">→</span></a>
     </div>
   </div>
 </header>
@@ -72,12 +73,12 @@
 <section class="hero">
   <div class="orb o1"></div><div class="orb o2"></div><div class="grid-bg"></div>
   <div class="container hero-content">
-    <span class="eyebrow">CRM sur mesure au Maroc · Pipeline commercial · Automatisation</span>
-    <h1>Un CRM qui <span class="hl">pense comme votre équipe</span>, pas comme un logiciel générique.</h1>
-    <p class="sub">Jobydoo Agency construit un CRM sur mesure au Maroc : pipeline commercial, automatisation des tâches répétitives, suivi clients, intégration WhatsApp Business, et tableaux de bord qui vous donnent le contrôle total sur votre croissance. Pour PME, agences, e-commerce, écoles, immobilier, artisans. Casablanca, Rabat, Marrakech.</p>
+    <span class="eyebrow" data-i18n="crmCustom.eyebrow">CRM sur mesure au Maroc · Pipeline commercial · Automatisation</span>
+    <h1 data-i18n="crmCustom.h1">Un CRM qui <span class="hl">pense comme votre équipe</span>, pas comme un logiciel générique.</h1>
+    <p class="sub" data-i18n="crmCustom.sub">Jobydoo Agency construit un CRM sur mesure au Maroc : pipeline commercial, automatisation des tâches répétitives, suivi clients, intégration WhatsApp Business, et tableaux de bord qui vous donnent le contrôle total sur votre croissance. Pour PME, agences, e-commerce, écoles, immobilier, artisans. Casablanca, Rabat, Marrakech.</p>
     <div class="hero-actions">
-      <a class="btn btn--primary" href="contact.html">Créer mon CRM sur mesure <span class="arr">→</span></a>
-      <a class="btn btn--ghost" href="#modules">Voir les modules</a>
+      <a class="btn btn--primary" href="contact.html" data-i18n="crmCustom.ctaBtn">Créer mon CRM sur mesure <span class="arr">→</span></a>
+      <a class="btn btn--ghost" href="#modules" data-i18n="crmCustom.ctaGhost">Voir les modules</a>
     </div>
   </div>
   <div class="scroll-cue"><span class="mouse"></span>Scroll</div>
@@ -172,7 +173,7 @@
 <section class="section section--light" id="faq-crm">
   <div class="container">
     <div class="reveal"><span class="eyebrow">Questions fréquentes</span><h2>FAQ CRM sur mesure — tout ce qu'on est souvent interrogé</h2></div>
-    <div style="margin-top:28px;max-width:860px">
+    <div class="faq-block" style="margin-top:28px;max-width:860px">
       <div class="faq-item"><button class="faq-q">Qu'est-ce qu'un CRM et à quoi sert-il ? <span class="plus">+</span></button><div class="faq-a"><p>Un CRM (Customer Relationship Management) est un outil qui centralise toutes les interactions avec vos clients et prospects : contacts, historiques de conversations, devis, commandes, rendez-vous, suivis. Pour une entreprise, il permet de ne plus perdre de prospects, de mieux convertir, de fidéliser et de prendre des décisions basées sur des données réelles.</p></div></div>
       <div class="faq-item"><button class="faq-q">Comment fonctionne le système de bonus-malus appelé CRM ? <span class="plus">+</span></button><div class="faq-a"><p>Un CRM peut reproduire un système de bonus-malus en attribuant des scores ou des niveaux de fidélité aux clients selon leurs achats ou leur engagement. Par exemple, un client fidèle peut accéder à des conditions avantageuses, tandis qu'un client inactif peut être relancé avec une offre ciblée. On configure ces règles selon votre métier, vos objectifs et votre stratégie commerciale.</p></div></div>
       <div class="faq-item"><button class="faq-q">Qu'est-ce qu'un CRM system ? <span class="plus">+</span></button><div class="faq-a"><p>Un CRM system est l'ensemble logiciel et processus qui gère la relation client de A à Z : la saisie et la gestion des contacts, le suivi des devis et commandes, la planification des rendez-vous, l'automatisation des relances, la génération de rapports et statistiques, et l'intégration avec d'autres outils (email, téléphone, site web, comptabilité, publicité).</p></div></div>
@@ -205,16 +206,16 @@
     <div class="footer-grid">
       <div>
         <div class="brand"><span class="logo">J</span> Jobydoo<span style="color:var(--amber)">.</span></div>
-        <p style="color:rgba(255,255,255,.7);max-width:34ch">Agence web au Maroc. Création de site web, media buying et CRM sur mesure, automatisés.</p>
+        <p style="color:rgba(255,255,255,.7);max-width:34ch" data-i18n="footer.desc">Agence web au Maroc. Création de site web, media buying et CRM sur mesure, automatisés.</p>
         <div class="socials" style="margin-top:14px">
           <a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="Instagram">ig</a><a href="#" aria-label="Facebook">fb</a>
         </div>
       </div>
-      <div><h5>Services</h5><a href="creation-site-web.html">Création de site web</a><a href="media-buying.html">Media Buying</a><a href="creation-crm.html">CRM sur mesure</a><a href="crm-sur-mesure.html">CRM sur mesure</a><a href="applications-general.html">Applications générales</a><a href="agence-communication.html">Agence de communication</a><a href="contact.html">Automatisation</a></div>
-      <div><h5>Agence</h5><a href="a-propos.html">À propos</a><a href="portfolio.html">Portfolio</a><a href="contact.html">Contact</a><a href="index.html">Accueil</a></div>
-      <div><h5>Contact</h5><a href="mailto:contact@jobydooagency.com">contact@jobydooagency.com</a><a href="tel:+212****3671">+212****3671</a><a href="contact.html">Formulaire</a></div>
+      <div><h5 data-i18n="footer.services">Services</h5><a href="creation-site-web.html" data-i18n="nav.web">Création de site web</a><a href="media-buying.html" data-i18n="nav.ads">Media Buying</a><a href="creation-crm.html" data-i18n="nav.crm">CRM sur mesure</a><a href="crm-sur-mesure.html" data-i18n="nav.crm">CRM sur mesure</a><a href="applications-general.html" data-i18n="nav.apps">Applications générales</a><a href="agence-communication.html" data-i18n="nav.agency">Agence de communication</a><a href="contact.html">Automatisation</a></div>
+      <div><h5 data-i18n="footer.agency">Agence</h5><a href="a-propos.html" data-i18n="nav.about">À propos</a><a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a><a href="contact.html" data-i18n="nav.contact">Contact</a><a href="index.html" data-i18n="nav.home">Accueil</a></div>
+      <div><h5>Contact</h5><a href="mailto:contact@jobydooagency.com">contact@jobydooagency.com</a><a href="tel:+212645833671">+212 645 833 671</a><a href="contact.html">Formulaire</a></div>
     </div>
-    <div class="footer-bottom"><span>© <span id="year">2026</span> Jobydoo Agency. Tous droits réservés.</span><span>Agence Web · Media Buying · CRM — Maroc</span></div>
+    <div class="footer-bottom"><span>© <span id="year">2026</span> Jobydoo Agency. <span data-i18n="footer.rights">Tous droits réservés.</span></span><span data-i18n="footer.sub">Agence Web · Media Buying · CRM — Maroc</span></div>
   </div>
 </footer>
 

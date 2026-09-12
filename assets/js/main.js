@@ -125,46 +125,100 @@
     });
   }
 
-  /* Contact form: POST to Formsubmit.co (HTML response, no JSON, delivers directly to Gmail) */
+  /* Contact form: POST to Formsubmit.co AJAX */
   var form = document.getElementById("contactForm");
+  var ok = document.getElementById("formOk");
+  var errBox = document.getElementById("formErr");
+
+  if(ok) ok.style.display = "none";
+  if(errBox) errBox.style.display = "none";
+
   if(form){
     form.addEventListener("submit", function(ev){
       ev.preventDefault();
+      if(errBox){ errBox.style.display = "none"; errBox.classList.remove("visible"); }
+      if(ok){ ok.style.display = "none"; ok.classList.remove("visible"); }
+
       var data = new FormData(form);
       var name = (data.get("name")||"").toString().trim();
       var email = (data.get("email")||"").toString().trim();
       var msg = (data.get("message")||"").toString().trim();
+      var phone = (data.get("phone")||"").toString().trim();
+      var company = (data.get("company")||"").toString().trim();
+      var service = (data.get("service")||"Création de site web").toString().trim();
+
       if(!name || !email || !msg){
-        alert("Merci de remplir tous les champs obligatoires.");
+        if(errBox){
+          errBox.textContent = "Merci de remplir les champs obligatoires (Nom, Email et Message).";
+          errBox.style.display = "block";
+          errBox.classList.add("visible");
+        } else {
+          alert("Merci de remplir les champs obligatoires (Nom, Email et Message).");
+        }
         return;
       }
-      var btn = form.querySelector("button[type=submit]");
-      if(btn){ btn.disabled = true; btn.textContent = "Envoi en cours…"; }
 
-      // 1) Post to Formsubmit.co (HTML response, no JSON, delivers directly to Gmail)
-      fetch(form.action, {
+      var btn = form.querySelector("button[type=submit]");
+      var origBtnHtml = btn ? btn.innerHTML : "Envoyer ma demande";
+      if(btn){ btn.disabled = true; btn.innerHTML = "Envoi en cours…"; }
+
+      var payload = {
+        name: name,
+        email: email,
+        company: company || "Non spécifié",
+        phone: phone || "Non spécifié",
+        service: service,
+        message: msg,
+        _subject: "Nouvelle demande Jobydoo Agency — " + service
+      };
+
+      fetch("https://formsubmit.co/ajax/jobthemaan@gmail.com", {
         method: "POST",
-        body: data,
-        headers: { "Accept": "text/html" }
-      }).then(function(r){
-        // Formsubmit.co returns 200 + HTML thank-you page on success
-        if(!r.ok) throw new Error("HTTP " + r.status);
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify(payload)
+      })
+      .then(function(r){
+        return r.json().then(function(json){
+          if(!r.ok && json && json.success === "false") {
+            throw new Error(json.message || ("HTTP " + r.status));
+          }
+          return json;
+        });
+      })
+      .then(function(){
         form.reset();
-        var ok = document.getElementById("formOk");
-        if(ok){ ok.style.display = "block"; ok.textContent = "Merci " + name.split(" ")[0] + " ! Votre demande a bien été envoyée. On vous répond sous 24h ouvrées."; }
-      }).catch(function(err){
-        // 2) Fallback: open mail client pre-filled to owner Gmail
-        var subject = encodeURIComponent("Nouvelle demande Jobydoo — " + (data.get("service")||"Contact"));
+        if(ok){
+          var firstName = name.split(" ")[0] || "cher client";
+          var txt = document.getElementById("okMsgText");
+          if(txt){
+            txt.textContent = "Merci " + firstName + " ! Votre demande a bien été envoyée. On vous répond sous 24h ouvrées.";
+          }
+          ok.style.display = "block";
+          ok.classList.add("visible");
+          ok.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        }
+      })
+      .catch(function(err){
+        console.warn("FormSubmit AJAX issue, opening mailto fallback:", err);
+        // Fallback: mailto
+        var subject = encodeURIComponent("Nouvelle demande Jobydoo — " + service);
         var body = encodeURIComponent(
-          "Nom: " + name + "\nEmail: " + email + "\nSociété: " + (data.get("company")||"—") +
-          "\nService: " + (data.get("service")||"—") + "\n\nMessage:\n" + msg
+          "Nom: " + name + "\nEmail: " + email + "\nTéléphone: " + (phone||"—") +
+          "\nSociété: " + (company||"—") + "\nService: " + service + "\n\nMessage:\n" + msg
         );
         window.location.href = "mailto:jobthemaan@gmail.com?subject=" + subject + "&body=" + body;
-        var ok = document.getElementById("formOk");
-        if(ok){ ok.style.display = "block"; ok.style.color = "var(--amber)"; ok.textContent = "Le serveur n'a pas répondu. Votre messagerie vient de s'ouvrir avec votre demande pré-remplie — vérifiez bien que jobthemaan@gmail.com est bien le destinataire."; }
-        console.warn("Formsubmit.co error, fallback mailto:", err);
-      }).finally(function(){
-        if(btn){ btn.disabled = false; btn.innerHTML = 'Envoyer ma demande <span class="arr">→</span>'; }
+
+        if(errBox){
+          errBox.innerHTML = "Votre demande a été préparée dans votre messagerie email. Si elle ne s'ouvre pas automatiquement, vous pouvez aussi nous contacter directement sur <a href='https://wa.me/212645833671' target='_blank' style='color:#059669;font-weight:700;text-decoration:underline'>WhatsApp au +212 645 833 671</a>.";
+          errBox.style.display = "block";
+          errBox.classList.add("visible");
+        }
+      })
+      .finally(function(){
+        if(btn){ btn.disabled = false; btn.innerHTML = origBtnHtml; }
       });
     });
   }
@@ -237,6 +291,7 @@
       "nav.pricing": "Tarifs",
       "nav.portfolio": "Portfolio",
       "nav.about": "À propos",
+      "nav.faqs": "FAQ",
       "nav.contact": "Contact",
       "nav.quote": 'Devis gratuit <span class="arr">→</span>',
 
@@ -408,7 +463,129 @@
       "portfolio.visitBtn": "Visiter le site",
       "portfolio.emptyTitle": "Aucun projet trouvé",
       "portfolio.emptyDesc": "Aucun client ne correspond à votre recherche actuelle. Essayez d'autres termes ou réinitialisez vos filtres.",
-      "portfolio.emptyReset": "Réinitialiser les filtres"
+      "portfolio.emptyReset": "Réinitialiser les filtres",
+
+      "nav.agency": "Agence de communication",
+
+      "pricing.eyebrow": "Tarifs & Délais Réduits · Transparence Totale",
+      "pricing.h1": 'Des prix imbattables, <span class="hl">des délais ultra-rapides.</span>',
+      "pricing.sub": "Nous avons optimisé nos processus pour vous offrir la meilleure qualité du marché marocain à des tarifs réduits et des délais de livraison record. Devis clair, net et sans mauvaise surprise.",
+      "pricing.ctaBtn": 'Demander un devis express <span class="arr">→</span>',
+      "pricing.ctaGhost": "Voir nos offres & tarifs",
+      "pricing.gridEyebrow": "Nos Tarifs & Délais 2026",
+      "pricing.gridTitle": "Nos offres ajustées au meilleur prix du marché",
+      "pricing.gridLead": "Découvrez nos tarifs réduits et nos temps de réalisation accélérés pour lancer votre projet en quelques jours seulement.",
+      "p1.title": "Site Vitrine / Pro",
+      "p1.desc": "Site web moderne 3 à 5 pages, design UX in-motion, responsive mobile, formulaire contact & SEO Google de base.",
+      "p1.price": "~ 3 500 – 8 500 MAD",
+      "p1.time": "⏱️ Livraison : 3 à 5 jours ouvrés",
+      "p2.title": "Site E-Commerce",
+      "p2.desc": "Boutique en ligne complète, catalogue produits, paiement CMI/Stripe/Cash, suivi de commandes & WhatsApp direct.",
+      "p2.price": "~ 8 500 – 18 500 MAD",
+      "p2.time": "⏱️ Livraison : 7 à 12 jours ouvrés",
+      "p3.title": "Blog & Rédaction SEO",
+      "p3.desc": "Espace blog optimisé avec CMS ultra-rapide, stratégie de contenu et articles rédigés pour positionner votre marque sur Google.",
+      "p3.price": "~ 2 500 – 6 500 MAD",
+      "p3.time": "⏱️ Livraison : 3 à 5 jours ouvrés",
+      "p4.title": "Media Buying (Google & Meta Ads)",
+      "p4.desc": "Gestion stratégique de vos campagnes Ads, réduction du coût par prospect (CPL), rapports hebdomadaires & optimisation ROI.",
+      "p4.price": "~ 1 800 – 5 500 MAD / mois",
+      "p4.time": "⚡ Lancement : 48h à 72h",
+      "p5.title": "CRM Sur Mesure (PME & Écoles)",
+      "p5.desc": "Centralisation des prospects web/WhatsApp, pipeline commercial visuel, relances automatisées et zéro frais d'abonnement.",
+      "p5.price": "~ 7 500 – 18 000 MAD",
+      "p5.time": "⏱️ Livraison : 7 à 14 jours ouvrés",
+      "p6.title": "Applications & Connecteurs ERP",
+      "p6.desc": "Outils de gestion de stock, portails B2B et connecteurs d'API sur-mesure pour Sage 100 Cloud et logiciels tiers.",
+      "p6.price": "~ 9 500 – 28 000 MAD",
+      "p6.time": "⏱️ Déploiement : 10 à 20 jours",
+      "p7.title": "Maintenance & Infogérance",
+      "p7.desc": "Sauvegardes régulières, mises à jour de sécurité, monitoring de disponibilité 24/7 et assistance technique prioritaire.",
+      "p7.price": "~ 800 – 2 200 MAD / mois",
+      "p7.time": "⚡ Support continu",
+      "p8.title": "Audit Digital & Conseil Express",
+      "p8.desc": "Audit complet de votre site actuel, de vos campagnes publicitaires et de votre conversion avec plan d'action immédiat.",
+      "p8.price": "Offert (ou 1 200 MAD complet)",
+      "p8.time": "⚡ Activation immédiate",
+      "pricing.faqEyebrow": "Questions fréquentes",
+      "pricing.faqTitle": "Tarifs & Délais — FAQ",
+      "pricing.ctaH2": "Vous avez un projet ou une idée de budget ?",
+      "pricing.ctaP": "Recevez une proposition tarifaire détaillée et un planning de livraison sous 24h ouvrées.",
+      "pricing.ctaBtn2": 'Demander mon devis express <span class="arr">→</span>',
+
+      "contact.eyebrow": "Contact · Devis gratuit",
+      "contact.h1": 'Parlons de votre <span class="hl">projet</span>.',
+      "contact.sub": "Dites-nous votre activité, vos tâches chronophages et vos objectifs. On revient vers vous avec une proposition claire, sans engagement.",
+      "contact.formEyebrow": "Écrivez-nous",
+      "contact.formH2": "Demandez un devis gratuit",
+      "contact.formLead": "Remplissez le formulaire — vous recevez une proposition claire sous 24h ouvrées.",
+      "contact.lblName": "Nom complet *",
+      "contact.lblEmail": "Email professionnel *",
+      "contact.lblCompany": "Société / Projet",
+      "contact.lblPhone": "Téléphone / WhatsApp",
+      "contact.lblService": "Service souhaité",
+      "contact.lblMessage": "Description de votre projet *",
+      "contact.phName": "Votre nom ou prénom",
+      "contact.phEmail": "vous@entreprise.com",
+      "contact.phCompany": "Nom de l'entreprise ou projet",
+      "contact.phPhone": "+212 600 000 000",
+      "contact.phMessage": "Décrivez votre activité, vos objectifs et vos besoins…",
+      "contact.submitBtn": 'Envoyer ma demande <span class="arr">→</span>',
+      "contact.formNote": "🔒 Vos informations restent strictement confidentielles. En cliquant sur « Envoyer », vous acceptez d'être recontacté par Jobydoo Agency.",
+      "contact.okMsg": "Merci ! Votre message a bien été envoyé. On vous répond très vite sous 24h ouvrées.",
+      "contact.waH4": "💬 Réponse instantanée",
+      "contact.waP": "Besoin d'un échange direct ? Notre équipe est joignable immédiatement sur WhatsApp pour discuter de votre projet.",
+      "contact.waBtn": '<span>Discuter sur WhatsApp</span> <span style="display:inline-block;transition:transform .2s">→</span>',
+      "contact.infoEmail": "Email direct",
+      "contact.infoPhone": "Téléphone & WhatsApp",
+      "contact.infoZone": "Zone d'intervention",
+      "contact.infoZoneDesc": "Casablanca, Rabat, Marrakech & tout le Maroc",
+      "contact.infoTime": "Délai de réponse",
+      "contact.infoTimeDesc": "Sous 24h ouvrées garanti",
+
+      "web.eyebrow": "Création de site web",
+      "web.h1": 'Un site web qui <span class="hl">travaille pour vous</span>, pas l\'inverse.',
+      "web.sub": 'Sites vitrines, e-commerce et plateformes sur mesure. Design "in motion", expérience mobile irréprochable et SEO technique intégré dès la conception — pour convertir vos visiteurs en clients.',
+      "web.ctaBtn": 'Lancer mon site <span class="arr">→</span>',
+      "web.ctaGhost": "Voir nos sites",
+
+      "ads.eyebrow": "Media Buying",
+      "ads.h1": 'Des campagnes qui <span class="hl">rapportent</span>, pas qui brûlent votre budget.',
+      "ads.sub": "Google Ads, Meta Ads et retargeting pilotés par la donnée. On optimise en continu pour baisser votre coût par acquisition et transformer votre trafic en clients.",
+      "ads.ctaBtn": 'Lancer mes campagnes <span class="arr">→</span>',
+      "ads.ctaGhost": "Voir la prestation",
+
+      "crm.eyebrow": "CRM sur mesure",
+      "crm.h1": 'Un CRM qui <span class="hl">pense comme votre équipe</span>.',
+      "crm.sub": "Fini les outils génériques mal adaptés. On construit un CRM fait pour VOTRE entreprise : suivi des leads, automatisations et automatisation pour faire le travail répétitif à votre place.",
+      "crm.ctaBtn": 'Créer mon CRM <span class="arr">→</span>',
+      "crm.ctaGhost": "Voir les modules",
+
+      "crmCustom.eyebrow": "CRM sur mesure au Maroc · Pipeline commercial · Automatisation",
+      "crmCustom.h1": 'Un CRM qui <span class="hl">pense comme votre équipe</span>, pas comme un logiciel générique.',
+      "crmCustom.sub": "Jobydoo Agency construit un CRM sur mesure au Maroc : pipeline commercial, automatisation des tâches répétitives, suivi clients, intégration WhatsApp Business, et tableaux de bord qui vous donnent le contrôle total sur votre croissance. Pour PME, agences, e-commerce, écoles, immobilier, artisans. Casablanca, Rabat, Marrakech.",
+      "crmCustom.ctaBtn": 'Créer mon CRM sur mesure <span class="arr">→</span>',
+      "crmCustom.ctaGhost": "Voir les modules",
+
+      "apps.eyebrow": "Applications générales sur mesure · Outils métier · Automatisation",
+      "apps.h1": 'Des applications qui <span class="hl">résolvent vos problèmes réels</span>, pas des logiciels génériques.',
+      "apps.sub": "Jobydoo Agency, applications générales sur mesure : gestion de stock, gestion commerciale, suivi de production, intégrations Sage 100 Cloud et outils métier spécifiques à votre activité. Pour entreprises et PME au Maroc — Casablanca, Rabat, Marrakech, Tanger, Agadir, partout.",
+      "apps.ctaBtn": 'Demander un devis <span class="arr">→</span>',
+      "apps.ctaGhost": "Voir les modules",
+
+      "agency.eyebrow": "Agence de communication au Maroc · Communication digitale",
+      "agency.h1": 'Une identité qui parle à vos clients — <span class="hl">avant même qu\'ils nous contactent.</span>',
+      "agency.sub": "Jobydoo Agency, agence de communication au Maroc : stratégie de marque, contenu web, communication digitale et gestion de réseaux sociaux. Pour que votre entreprise soit perçue comme il se doit — à Casablanca, Rabat, Marrakech et partout au Maroc.",
+      "agency.ctaBtn": 'Parler de ma communication <span class="arr">→</span>',
+      "agency.ctaGhost": "Voir nos réalisations",
+
+      "about.eyebrow": "À propos",
+      "about.h1": 'On a créé Jobydoo pour <span class="hl">simplifier le digital</span> des entreprises.',
+      "about.sub": "Trop d'entreprises jonglent avec des prestataires disjoints et des outils qui coûtent cher en temps. Nous réunissons site web, acquisition et CRM en un seul partenaire utile.",
+
+      "faq.eyebrow": "FAQ",
+      "faq.h1": 'Tout ce qu\'on est <span class="hl">souvent interrogé</span>.',
+      "faq.sub": "Création de site web, media buying, CRM, automatisation et e-commerce au Maroc : les réponses claires, sans jargon, sans engagement."
     },
     en: {
       "nav.home": "Home",
@@ -416,9 +593,11 @@
       "nav.ads": "Media Buying",
       "nav.crm": "Custom CRM",
       "nav.apps": "Custom Apps",
+      "nav.agency": "Communication Agency",
       "nav.pricing": "Pricing",
       "nav.portfolio": "Portfolio",
       "nav.about": "About Us",
+      "nav.faqs": "FAQ",
       "nav.contact": "Contact",
       "nav.quote": 'Free Quote <span class="arr">→</span>',
 
@@ -590,7 +769,127 @@
       "portfolio.visitBtn": "Visit website",
       "portfolio.emptyTitle": "No projects found",
       "portfolio.emptyDesc": "No client matched your current search. Try another keyword or reset your filters.",
-      "portfolio.emptyReset": "Reset filters"
+      "portfolio.emptyReset": "Reset filters",
+
+      "pricing.eyebrow": "Transparent Pricing & Fast Delivery · Full Clarity",
+      "pricing.h1": 'Competitive pricing, <span class="hl">lightning-fast delivery.</span>',
+      "pricing.sub": "We streamlined our processes to deliver premium web and software solutions in Morocco with no delays and transparent, upfront pricing.",
+      "pricing.ctaBtn": 'Request an Express Quote <span class="arr">→</span>',
+      "pricing.ctaGhost": "View Plans & Rates",
+      "pricing.gridEyebrow": "2026 Pricing & Turnaround",
+      "pricing.gridTitle": "Tailored packages with guaranteed delivery",
+      "pricing.gridLead": "Explore our cost-effective pricing tiers and expedited realization times to get online in just a few days.",
+      "p1.title": "Business Showcase Website",
+      "p1.desc": "Modern 3 to 5 pages site, motion UX design, fully responsive mobile, contact form & baseline Google SEO.",
+      "p1.price": "~ 3,500 – 8,500 MAD",
+      "p1.time": "⏱️ Delivery: 3 to 5 business days",
+      "p2.title": "E-Commerce Online Store",
+      "p2.desc": "Complete online boutique, product catalog, CMI card/Stripe/Cash payments, order management & direct WhatsApp.",
+      "p2.price": "~ 8,500 – 18,500 MAD",
+      "p2.time": "⏱️ Delivery: 7 to 12 business days",
+      "p3.title": "Blog & SEO Content Engine",
+      "p3.desc": "Fast headless CMS blog setup, content strategy & copywriting optimized to rank your business on Google.",
+      "p3.price": "~ 2,500 – 6,500 MAD",
+      "p3.time": "⏱️ Delivery: 3 to 5 business days",
+      "p4.title": "Media Buying (Google & Meta Ads)",
+      "p4.desc": "Strategic ad campaigns management, lower cost per lead (CPL), weekly KPI reporting & continuous ROI tuning.",
+      "p4.price": "~ 1,800 – 5,500 MAD / month",
+      "p4.time": "⚡ Launch: 48h to 72h",
+      "p5.title": "Custom CRM (SMBs & Real Estate)",
+      "p5.desc": "Centralized WhatsApp/web lead capture, visual deal pipeline, automated follow-ups & zero recurring software fees.",
+      "p5.price": "~ 7,500 – 18,000 MAD",
+      "p5.time": "⏱️ Delivery: 7 to 14 business days",
+      "p6.title": "Custom Apps & ERP Connectors",
+      "p6.desc": "Inventory management tools, B2B client portals & custom API connectors for Sage 100 ERP.",
+      "p6.price": "~ 9,500 – 28,000 MAD",
+      "p6.time": "⏱️ Deployment: 10 to 20 days",
+      "p7.title": "Maintenance & Support",
+      "p7.desc": "Regular automated backups, security patches, 24/7 uptime monitoring & priority support.",
+      "p7.price": "~ 800 – 2,200 MAD / month",
+      "p7.time": "⚡ Continuous support",
+      "p8.title": "Digital Audit & Strategy",
+      "p8.desc": "Comprehensive assessment of your current website, advertising funnels & conversion rates with immediate action plan.",
+      "p8.price": "Complimentary (or 1,200 MAD deep-dive)",
+      "p8.time": "⚡ Immediate kickoff",
+      "pricing.faqEyebrow": "Frequently Asked Questions",
+      "pricing.faqTitle": "Pricing & Delivery — FAQ",
+      "pricing.ctaH2": "Have a project or a budget in mind?",
+      "pricing.ctaP": "Get a detailed quote and turnaround schedule within 24 business hours.",
+      "pricing.ctaBtn2": 'Request My Express Quote <span class="arr">→</span>',
+
+      "contact.eyebrow": "Contact · Free Quote",
+      "contact.h1": 'Let\'s talk about your <span class="hl">project</span>.',
+      "contact.sub": "Tell us about your business, repetitive tasks, and growth targets. We will get back to you with a clear, no-obligation proposal.",
+      "contact.formEyebrow": "Drop Us a Line",
+      "contact.formH2": "Request a Free Quote",
+      "contact.formLead": "Fill in the form — you will receive a transparent proposal within 24 business hours.",
+      "contact.lblName": "Full Name *",
+      "contact.lblEmail": "Work Email *",
+      "contact.lblCompany": "Company / Project",
+      "contact.lblPhone": "Phone / WhatsApp",
+      "contact.lblService": "Desired Service",
+      "contact.lblMessage": "Project Description *",
+      "contact.phName": "Your full name",
+      "contact.phEmail": "you@company.com",
+      "contact.phCompany": "Company or project name",
+      "contact.phPhone": "+212 600 000 000",
+      "contact.phMessage": "Describe your activity, your objectives, and your project needs…",
+      "contact.submitBtn": 'Send My Request <span class="arr">→</span>',
+      "contact.formNote": "🔒 Your information remains strictly confidential. By clicking 'Send', you agree to be contacted by Jobydoo Agency.",
+      "contact.okMsg": "Thank you! Your message has been sent successfully. We will reply within 24 business hours.",
+      "contact.waH4": "💬 Instant Response",
+      "contact.waP": "Need a quick discussion? Our team is available directly on WhatsApp to discuss your project.",
+      "contact.waBtn": '<span>Chat on WhatsApp</span> <span style="display:inline-block;transition:transform .2s">→</span>',
+      "contact.infoEmail": "Direct Email",
+      "contact.infoPhone": "Phone & WhatsApp",
+      "contact.infoZone": "Coverage Area",
+      "contact.infoZoneDesc": "Casablanca, Rabat, Marrakech & all Morocco",
+      "contact.infoTime": "Response Time",
+      "contact.infoTimeDesc": "Guaranteed within 24 business hours",
+
+      "web.eyebrow": "Website Creation · Modern UX · Morocco",
+      "web.h1": 'A website that <span class="hl">works for you</span>, not against you.',
+      "web.sub": "Showcase websites, e-commerce stores, and bespoke platforms. Motion UX design, flawless mobile responsiveness, and technical SEO from day one — engineered to turn visitors into paying clients.",
+      "web.ctaBtn": 'Launch My Website <span class="arr">→</span>',
+      "web.ctaGhost": "View Our Portfolio",
+
+      "ads.eyebrow": "Media Buying · Google & Meta Ads",
+      "ads.h1": 'Ad campaigns that <span class="hl">generate profit</span>, not waste your budget.',
+      "ads.sub": "Data-driven Google Ads, Meta Ads, and retargeting. We continuously optimize to lower your customer acquisition cost (CAC) and turn traffic into predictable sales.",
+      "ads.ctaBtn": 'Launch My Campaigns <span class="arr">→</span>',
+      "ads.ctaGhost": "Explore Services",
+
+      "crm.eyebrow": "Custom CRM & Sales Automation",
+      "crm.h1": 'A CRM that <span class="hl">thinks like your team</span>.',
+      "crm.sub": "No more rigid, generic tools that nobody uses. We build a CRM tailored to YOUR business: lead centralization, sales pipeline, and automated follow-ups via WhatsApp and email.",
+      "crm.ctaBtn": 'Build My CRM <span class="arr">→</span>',
+      "crm.ctaGhost": "View Modules",
+
+      "crmCustom.eyebrow": "Custom CRM in Morocco · Sales Pipeline · Automation",
+      "crmCustom.h1": 'A CRM that <span class="hl">thinks like your team</span>, not like a generic spreadsheet.',
+      "crmCustom.sub": "Jobydoo Agency builds custom CRMs in Morocco: visual sales pipeline, routine task automation, customer follow-ups, WhatsApp Business integration, and clear analytics dashboards for full growth visibility.",
+      "crmCustom.ctaBtn": 'Build My Custom CRM <span class="arr">→</span>',
+      "crmCustom.ctaGhost": "View Modules",
+
+      "apps.eyebrow": "Custom Business Apps · ERP Tools · Automation",
+      "apps.h1": 'Applications that <span class="hl">solve real operational bottlenecks</span>, not generic bloatware.',
+      "apps.sub": "Jobydoo Agency designs bespoke business applications: inventory management, sales invoicing, field operations, and custom Sage 100 Cloud API bridges tailored for Moroccan companies.",
+      "apps.ctaBtn": 'Request a Quote <span class="arr">→</span>',
+      "apps.ctaGhost": "View Modules",
+
+      "agency.eyebrow": "Communication Agency in Morocco · Digital Branding",
+      "agency.h1": 'A brand identity that speaks to your clients — <span class="hl">before they even contact you.</span>',
+      "agency.sub": "Jobydoo Agency: strategic branding, high-converting copywriting, digital communication, and social media management to ensure your business is recognized as a market leader across Morocco.",
+      "agency.ctaBtn": 'Discuss My Brand Strategy <span class="arr">→</span>',
+      "agency.ctaGhost": "View Our Portfolio",
+
+      "about.eyebrow": "About Us",
+      "about.h1": 'We built Jobydoo to <span class="hl">simplify digital growth</span> for businesses.',
+      "about.sub": "Too many businesses juggle disconnected agencies and tools that drain time and capital. We unite web development, client acquisition, and CRM under one effective, reliable partner.",
+
+      "faq.eyebrow": "FAQ",
+      "faq.h1": 'Everything you need to know, <span class="hl">clearly answered</span>.',
+      "faq.sub": "Website creation, media buying, custom CRM, workflow automation, and e-commerce in Morocco: transparent answers, no jargon, no commitment."
     }
   };
 
@@ -618,6 +917,37 @@
         el.innerHTML = I18N[lang][key];
       }
     });
+
+    // Update placeholders with data-i18n-ph
+    document.querySelectorAll("[data-i18n-ph]").forEach(function(el){
+      var key = el.getAttribute("data-i18n-ph");
+      if(I18N[lang] && I18N[lang][key]){
+        el.setAttribute("placeholder", I18N[lang][key]);
+      }
+    });
+
+    // Update select options if on contact page
+    var servSelect = document.getElementById("service");
+    if(servSelect){
+      var opts = lang === "en" ? [
+        "Website Creation",
+        "Media Buying (Paid Ads)",
+        "Custom CRM & Automation",
+        "Custom Applications / ERP",
+        "Communication Agency",
+        "Other / Full Project"
+      ] : [
+        "Création de site web",
+        "Media Buying (Publicités Ads)",
+        "CRM sur mesure & Automatisation",
+        "Applications générales",
+        "Agence de communication globale",
+        "Autre / Projet complet"
+      ];
+      servSelect.querySelectorAll("option").forEach(function(opt, idx){
+        if(opts[idx]) opt.textContent = opts[idx];
+      });
+    }
 
     // Update floating and header lang toggles
     document.querySelectorAll(".lang-toggle, .lang-toggle-nav").forEach(function(btn){
@@ -661,6 +991,9 @@
       });
     });
   }
+
+    // Initialize current language state on page load
+    applyLanguage(currentLang);
 
   /* WhatsApp Floating Button (+212645833671) */
   function ensureWhatsAppButton(){

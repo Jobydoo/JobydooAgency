@@ -26,7 +26,7 @@
   "name": "Jobydoo Agency",
   "description": "Agence de marketing digital Casablanca et Rabat : Google Ads, Meta Ads, retargeting, campagnes publicitaires, gestion de publicité en ligne. Baisse du coût par acquisition, maximisation du ROI.",
   "url": "https://www.jobydooagency.com/media-buying",
-  "telephone": "+212****3671",
+  "telephone": "+212 645 833 671",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Casablanca",
@@ -49,27 +49,30 @@
     <a class="brand" href="index.html"><span class="logo">J</span> Jobydoo<span style="color:var(--amber)">.</span></a>
     <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
     <ul class="nav-links">
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="creation-site-web.html">Création de site web</a></li>
-      <li><a href="media-buying.html">Media Buying</a></li>
-      <li><a href="creation-crm.html">CRM sur mesure</a></li>
-      <li><a href="applications-general.html">Applications générales</a></li>
-      <li><a href="pricing.html">Tarifs</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="a-propos.html">À propos</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+      <li><a href="creation-site-web.html" data-i18n="nav.web">Création de site web</a></li>
+      <li><a href="media-buying.html" class="active" data-i18n="nav.ads">Media Buying</a></li>
+      <li><a href="creation-crm.html" data-i18n="nav.crm">CRM sur mesure</a></li>
+      <li><a href="applications-general.html" data-i18n="nav.apps">Applications générales</a></li>
+      <li><a href="pricing.html" data-i18n="nav.pricing">Tarifs</a></li>
+      <li><a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a></li>
+      <li><a href="a-propos.html" data-i18n="nav.about">À propos</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
     </ul>
-    <div class="nav-cta"><a class="btn btn--primary" href="contact.html">Devis gratuit <span class="arr">→</span></a></div>
+    <div class="nav-cta">
+      <button class="lang-toggle" id="langToggle" title="Changer la langue / Change language" aria-label="Changer la langue"><span class="globe">🌐</span> <span class="cur">FR</span> / <span class="oth">EN</span></button>
+      <a class="btn btn--primary" href="contact.html" data-i18n="nav.quote">Devis gratuit <span class="arr">→</span></a>
+    </div>
   </div>
 </header>
 
 <section class="hero" style="min-height:78vh">
   <div class="orb o1"></div><div class="orb o2"></div><div class="grid-bg"></div>
   <div class="container hero-content">
-    <span class="eyebrow">Media Buying</span>
-    <h1>Des campagnes qui <span class="hl">rapportent</span>, pas qui brûlent votre budget.</h1>
-    <p class="sub">Google Ads, Meta Ads et retargeting pilotés par la donnée. On optimise en continu pour baisser votre coût par acquisition et transformer votre trafic en clients.</p>
-    <div class="hero-actions"><a class="btn btn--primary" href="contact.html">Lancer mes campagnes <span class="arr">→</span></a><a class="btn btn--ghost" href="#presta">Voir la prestation</a></div>
+    <span class="eyebrow" data-i18n="ads.eyebrow">Media Buying</span>
+    <h1 data-i18n="ads.h1">Des campagnes qui <span class="hl">rapportent</span>, pas qui brûlent votre budget.</h1>
+    <p class="sub" data-i18n="ads.sub">Google Ads, Meta Ads et retargeting pilotés par la donnée. On optimise en continu pour baisser votre coût par acquisition et transformer votre trafic en clients.</p>
+    <div class="hero-actions"><a class="btn btn--primary" href="contact.html" data-i18n="ads.ctaBtn">Lancer mes campagnes <span class="arr">→</span></a><a class="btn btn--ghost" href="#presta" data-i18n="ads.ctaGhost">Voir la prestation</a></div>
   </div>
 </section>
 
@@ -119,23 +122,25 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section section--light" id="faq">
   <div class="container">
-    <div class="faq-item"><button class="faq-q">Comment lancer un site e-commerce au Maroc ?<span class="plus">+</span></button>
-      <div class="faq-a"><p>On choisit le modèle (site sur mesure, Shopify, WooCommerce…), on configure les paiements adaptés au Maroc (CMI, carte, mobile, retrait), on prépare les fiches produits et les conditions, on met en place le tracking des conversions, et on acquiert du trafic via SEO et publicité. Un bon accompagnement évite les erreurs coûteuses au démarrage.</p></div>
+    <div class="reveal"><span class="eyebrow">Questions fréquentes</span><h2>FAQ Media Buying &amp; E-commerce au Maroc</h2></div>
+    <div class="faq-block" style="margin-top:28px;max-width:900px">
+      <div class="faq-item"><button class="faq-q">Comment lancer un site e-commerce au Maroc ?<span class="plus">+</span></button>
+        <div class="faq-a"><p>On choisit le modèle (site sur mesure, Shopify, WooCommerce…), on configure les paiements adaptés au Maroc (CMI, carte, mobile, retrait), on prépare les fiches produits et les conditions, on met en place le tracking des conversions, et on acquiert du trafic via SEO et publicité. Un bon accompagnement évite les erreurs coûteuses au démarrage.</p></div>
+      </div>
+      <div class="faq-item"><button class="faq-q">Est-ce qu'Amazon livre au Maroc ?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Oui, Amazon propose certains produits avec livraison au Maroc, mais le catalogue et les frais varient selon les articles et les pays d'expédition. Pour les entreprises marocaines qui veulent vendre en ligne, on recommande souvent une solution locale (e-commerce sur mesure, Shopify, WooCommerce) pour mieux contrôler l'expérience client et les modes de paiement.</p></div>
+      </div>
+      <div class="faq-item"><button class="faq-q">Comment vendre en ligne au Maroc ?<span class="plus">+</span></button>
+        <div class="faq-a"><p>On commence par choisir sa plateforme de vente (site sur mesure, Shopify, WooCommerce, marketplace…), configurer les paiements et la livraison adaptés au public marocain, rédiger des fiches produits qui convertissent, et acquérir du trafic via SEO et publicité ciblée. La confiance et la clarté des conditions sont souvent déterminantes.</p></div>
+      </div>
+      <div class="faq-item"><button class="faq-q">Peut-on faire du dropshipping avec une adresse au Maroc ?<span class="plus">+</span></button>
+        <div class="faq-a"><p>Oui, c'est techniquement possible, mais cela dépend des fournisseurs, des délais de livraison et des attentes des clients. Pour une activité durable, on recommande souvent de combiner dropshipping ou stock local avec un site e-commerce bien optimisé et une stratégie de communication claire.</p></div>
+      </div>
     </div>
-    <div class="faq-item"><button class="faq-q">Est-ce qu'Amazon livre au Maroc ?<span class="plus">+</span></button>
-      <div class="faq-a"><p>Oui, Amazon propose certains produits avec livraison au Maroc, mais le catalogue et les frais varient selon les articles et les pays d'expédition. Pour les entreprises marocaines qui veulent vendre en ligne, on recommande souvent une solution locale (e-commerce sur mesure, Shopify, WooCommerce) pour mieux contrôler l'expérience client et les modes de paiement.</p></div>
-    </div>
-    <div class="faq-item"><button class="faq-q">Comment vendre en ligne au Maroc ?<span class="plus">+</span></button>
-      <div class="faq-a"><p>On commence par choisir sa plateforme de vente (site sur mesure, Shopify, WooCommerce, marketplace…), configurer les paiements et la livraison adaptés au public marocain, rédiger des fiches produits qui convertissent, et acquérir du trafic via SEO et publicité ciblée. La confiance et la clarté des conditions sont souvent déterminantes.</p></div>
-    </div>
-    <div class="faq-item"><button class="faq-q">Peut-on faire du dropshipping avec une adresse au Maroc ?<span class="plus">+</span></button>
-      <div class="faq-a"><p>Oui, c'est techniquement possible, mais cela dépend des fournisseurs, des délais de livraison et des attentes des clients. Pour une activité durable, on recommande souvent de combiner dropshipping ou stock local avec un site e-commerce bien optimisé et une stratégie de communication claire.</p></div>
-    </div>
-    </div>
-    </div>
-    </section>
+  </div>
+</section>
 
     <section class="section">
       <div class="container">
@@ -150,13 +155,13 @@
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
-      <div><div class="brand"><span class="logo">J</span> Jobydoo<span style="color:var(--amber)">.</span></div><p style="color:rgba(255,255,255,.7);max-width:34ch">Agence web au Maroc. Création de site web, media buying et CRM sur mesure, automatisés.</p>
+      <div><div class="brand"><span class="logo">J</span> Jobydoo<span style="color:var(--amber)">.</span></div><p style="color:rgba(255,255,255,.7);max-width:34ch" data-i18n="footer.desc">Agence web au Maroc. Création de site web, media buying et CRM sur mesure, automatisés.</p>
         <div class="socials" style="margin-top:14px"><a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="Instagram">ig</a><a href="#" aria-label="Facebook">fb</a></div></div>
-      <div><h5>Services</h5><a href="creation-site-web.html">Création de site web</a><a href="media-buying.html">Media Buying</a><a href="creation-crm.html">CRM sur mesure</a><a href="applications-general.html">Applications générales</a><a href="contact.html">Automatisation</a></div>
-      <div><h5>Agence</h5><a href="a-propos.html">À propos</a><a href="portfolio.html">Portfolio</a><a href="faqs.html">FAQ</a><a href="contact.html">Contact</a><a href="index.html">Accueil</a></div>
+      <div><h5 data-i18n="footer.services">Services</h5><a href="creation-site-web.html" data-i18n="nav.web">Création de site web</a><a href="media-buying.html" data-i18n="nav.ads">Media Buying</a><a href="creation-crm.html" data-i18n="nav.crm">CRM sur mesure</a><a href="applications-general.html" data-i18n="nav.apps">Applications générales</a><a href="contact.html">Automatisation</a></div>
+      <div><h5 data-i18n="footer.agency">Agence</h5><a href="a-propos.html" data-i18n="nav.about">À propos</a><a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a><a href="faqs.html" data-i18n="nav.faqs">FAQ</a><a href="contact.html" data-i18n="nav.contact">Contact</a><a href="index.html" data-i18n="nav.home">Accueil</a></div>
       <div><h5>Contact</h5><a href="mailto:contact@jobydooagency.com">contact@jobydooagency.com</a><a href="tel:+212645833671">+212 645 833 671</a><a href="contact.html">Formulaire</a></div>
     </div>
-    <div class="footer-bottom"><span>© <span id="year">2026</span> Jobydoo Agency. Tous droits réservés.</span><span>Agence Web · Media Buying · CRM — Maroc</span></div>
+    <div class="footer-bottom"><span>© <span id="year">2026</span> Jobydoo Agency. <span data-i18n="footer.rights">Tous droits réservés.</span></span><span data-i18n="footer.sub">Agence Web · Media Buying · CRM — Maroc</span></div>
   </div>
 </footer>
 <script src="assets/js/main.js"></script>

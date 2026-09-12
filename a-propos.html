@@ -23,26 +23,30 @@
     <a class="brand" href="index.html"><span class="logo">J</span> Jobydoo<span style="color:var(--amber)">.</span></a>
     <button class="burger" aria-label="Menu"><span></span><span></span><span></span></button>
     <ul class="nav-links">
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="creation-site-web.html">Création de site web</a></li>
-      <li><a href="media-buying.html">Media Buying</a></li>
-      <li><a href="creation-crm.html">CRM sur mesure</a></li>
-      <li><a href="applications-general.html">Applications générales</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="faqs.html">FAQ</a></li>
-      <li><a href="a-propos.html">À propos</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+      <li><a href="creation-site-web.html" data-i18n="nav.web">Création de site web</a></li>
+      <li><a href="media-buying.html" data-i18n="nav.ads">Media Buying</a></li>
+      <li><a href="creation-crm.html" data-i18n="nav.crm">CRM sur mesure</a></li>
+      <li><a href="applications-general.html" data-i18n="nav.apps">Applications générales</a></li>
+      <li><a href="pricing.html" data-i18n="nav.pricing">Tarifs</a></li>
+      <li><a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a></li>
+      <li><a href="faqs.html" data-i18n="nav.faqs">FAQ</a></li>
+      <li><a href="a-propos.html" class="active" data-i18n="nav.about">À propos</a></li>
+      <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
     </ul>
-    <div class="nav-cta"><a class="btn btn--primary" href="contact.html">Devis gratuit <span class="arr">→</span></a></div>
+    <div class="nav-cta">
+      <button class="lang-toggle" id="langToggle" title="Changer la langue / Change language" aria-label="Changer la langue"><span class="globe">🌐</span> <span class="cur">FR</span> / <span class="oth">EN</span></button>
+      <a class="btn btn--primary" href="contact.html" data-i18n="nav.quote">Devis gratuit <span class="arr">→</span></a>
+    </div>
   </div>
 </header>
 
 <section class="hero" style="min-height:66vh">
   <div class="orb o1"></div><div class="orb o2"></div><div class="grid-bg"></div>
   <div class="container hero-content">
-    <span class="eyebrow">À propos</span>
-    <h1>On a créé Jobydoo pour <span class="hl">simplifier le digital</span> des entreprises.</h1>
-    <p class="sub">Trop d'entreprises jonglent avec des prestataires disjoints et des outils qui coûtent cher en temps. Nous réunissons site web, acquisition et CRM en un seul partenaire utile.</p>
+    <span class="eyebrow" data-i18n="about.eyebrow">À propos</span>
+    <h1 data-i18n="about.h1">On a créé Jobydoo pour <span class="hl">simplifier le digital</span> des entreprises.</h1>
+    <p class="sub" data-i18n="about.sub">Trop d'entreprises jonglent avec des prestataires disjoints et des outils qui coûtent cher en temps. Nous réunissons site web, acquisition et CRM en un seul partenaire utile.</p>
   </div>
 </section>
 
@@ -90,13 +94,13 @@
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
-      <div><div class="brand"><span class="logo">J</span> Jobydoo<span style="color:var(--amber)">.</span></div><p style="color:rgba(255,255,255,.7);max-width:34ch">Agence web au Maroc. Création de site web, media buying et CRM sur mesure, automatisés.</p>
+      <div><div class="brand"><span class="logo">J</span> Jobydoo<span style="color:var(--amber)">.</span></div><p style="color:rgba(255,255,255,.7);max-width:34ch" data-i18n="footer.desc">Agence web au Maroc. Création de site web, media buying et CRM sur mesure, automatisés.</p>
         <div class="socials" style="margin-top:14px"><a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="Instagram">ig</a><a href="#" aria-label="Facebook">fb</a></div></div>
-      <div><h5>Services</h5><a href="creation-site-web.html">Création de site web</a><a href="media-buying.html">Media Buying</a><a href="creation-crm.html">CRM sur mesure</a><a href="applications-general.html">Applications générales</a><a href="contact.html">Automatisation</a></div>
-      <div><h5>Agence</h5><a href="a-propos.html">À propos</a><a href="portfolio.html">Portfolio</a><a href="faqs.html">FAQ</a><a href="contact.html">Contact</a><a href="index.html">Accueil</a></div>
+      <div><h5 data-i18n="footer.services">Services</h5><a href="creation-site-web.html" data-i18n="nav.web">Création de site web</a><a href="media-buying.html" data-i18n="nav.ads">Media Buying</a><a href="creation-crm.html" data-i18n="nav.crm">CRM sur mesure</a><a href="applications-general.html" data-i18n="nav.apps">Applications générales</a><a href="contact.html">Automatisation</a></div>
+      <div><h5 data-i18n="footer.agency">Agence</h5><a href="a-propos.html" data-i18n="nav.about">À propos</a><a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a><a href="faqs.html" data-i18n="nav.faqs">FAQ</a><a href="contact.html" data-i18n="nav.contact">Contact</a><a href="index.html" data-i18n="nav.home">Accueil</a></div>
       <div><h5>Contact</h5><a href="mailto:contact@jobydooagency.com">contact@jobydooagency.com</a><a href="tel:+212645833671">+212 645 833 671</a><a href="contact.html">Formulaire</a></div>
     </div>
-    <div class="footer-bottom"><span>© <span id="year">2026</span> Jobydoo Agency. Tous droits réservés.</span><span>Agence Web · Media Buying · CRM — Maroc</span></div>
+    <div class="footer-bottom"><span>© <span id="year">2026</span> Jobydoo Agency. <span data-i18n="footer.rights">Tous droits réservés.</span></span><span data-i18n="footer.sub">Agence Web · Media Buying · CRM — Maroc</span></div>
   </div>
 </footer>
 <script src="assets/js/main.js"></script>
