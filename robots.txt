@@ -1,4 +1,10 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://www.jobydooagency.com/sitemap.xml
+
+# Block admin and sensitive paths
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /private/

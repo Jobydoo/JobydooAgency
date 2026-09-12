@@ -1,18 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://www.jobydooagency.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://www.jobydooagency.com/creation-site-web.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.jobydooagency.com/media-buying.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.jobydooagency.com/creation-crm.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.jobydooagency.com/crm-sur-mesure.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.jobydooagency.com/crm-immobilier.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.jobydooagency.com/crm-pme.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.jobydooagency.com/crm-ecoles-privees.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.jobydooagency.com/agence-communication.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.jobydooagency.com/applications-general.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.jobydooagency.com/pricing.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.jobydooagency.com/portfolio.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.jobydooagency.com/a-propos.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://www.jobydooagency.com/contact.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.jobydooagency.com/faqs.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://www.jobydooagency.com/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jobydooagency.com/en/"/>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/creation-site-web.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/creation-site-web.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jobydooagency.com/en/creation-site-web.html"/>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/media-buying.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/media-buying.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jobydooagency.com/en/media-buying.html"/>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/creation-crm.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/creation-crm.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jobydooagency.com/en/creation-crm.html"/>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/applications-general.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/applications-general.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jobydooagency.com/en/applications-general.html"/>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/portfolio.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/portfolio.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jobydooagency.com/en/portfolio.html"/>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/faqs.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/faqs.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jobydooagency.com/en/faqs.html"/>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/contact.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jobydooagency.com/en/contact.html"/>
+  </url>
 </urlset>

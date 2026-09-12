@@ -545,9 +545,10 @@ body.no-scroll{overflow:hidden!important;height:100vh!important;height:100dvh!im
 /* Modern Client Cards Grid */
 .client-grid{
   display:grid;
-  grid-template-columns:repeat(3,1fr);
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
   gap:22px;
   margin-top:16px;
+  width:100%;
 }
 .client-card{
   background:var(--bg-card);
@@ -556,14 +557,33 @@ body.no-scroll{overflow:hidden!important;height:100vh!important;height:100dvh!im
   overflow:hidden;
   display:flex;
   flex-direction:column;
+  min-width:0;
   box-shadow:0 3px 12px rgba(11,30,63,.04);
-  transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s;
+  transition:transform .3s var(--ease),box-shadow .3s var(--ease),border-color .3s,border-color .3s;
   position:relative;
+  backdrop-filter:blur(4px);
+}
+.client-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:var(--radius);
+  padding:1px;
+  background:linear-gradient(135deg,rgba(30,106,255,.06),rgba(255,107,53,.04),transparent 60%);
+  -webkit-mask:linear-gradient(var(--bg-card),var(--bg-card)) content-box,linear-gradient(var(--bg-card),var(--bg-card));
+  -webkit-mask-composite:destination-out;
+          mask-composite:darken;
+  opacity:0;
+  transition:opacity .3s var(--ease);
+  pointer-events:none;
 }
 .client-card:hover{
-  transform:translateY(-6px);
+  transform:translateY(-8px);
   border-color:var(--accent-border);
-  box-shadow:0 16px 36px -6px rgba(11,30,63,.12);
+  box-shadow:0 20px 40px -10px rgba(11,30,63,.12);
+}
+.client-card:hover::before{
+  opacity:1;
 }
 .client-card.is-hidden{
   display:none!important;
@@ -777,7 +797,7 @@ body.no-scroll{overflow:hidden!important;height:100vh!important;height:100dvh!im
 @media (max-width:1180px){
   .portfolio-hero-stats{grid-template-columns:repeat(2,1fr)}
   .featured-showcase{grid-template-columns:1fr;gap:28px;padding:26px}
-  .client-grid{grid-template-columns:repeat(2,1fr);gap:18px}
+  .client-grid{grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
   .portfolio-toolbar-top{flex-direction:column;align-items:stretch}
   .portfolio-search-box{max-width:100%}
 }
