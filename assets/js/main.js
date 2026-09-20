@@ -897,13 +897,17 @@
 
   var currentLang = "fr";
   try {
-    var urlParams = new URLSearchParams(window.location.search);
-    var pLang = urlParams.get("lang");
-    if(pLang === "en" || pLang === "fr"){
-      currentLang = pLang;
-      localStorage.setItem("jobydoo_lang", pLang);
+    if(document.documentElement.lang === "en" || window.location.pathname.indexOf("/en") !== -1){
+      currentLang = "en";
     } else {
-      currentLang = localStorage.getItem("jobydoo_lang") || "fr";
+      var urlParams = new URLSearchParams(window.location.search);
+      var pLang = urlParams.get("lang");
+      if(pLang === "en" || pLang === "fr"){
+        currentLang = pLang;
+        localStorage.setItem("jobydoo_lang", pLang);
+      } else {
+        currentLang = localStorage.getItem("jobydoo_lang") || "fr";
+      }
     }
   } catch(e){}
 
@@ -973,7 +977,46 @@
     var toggleBtn = e.target.closest(".lang-toggle, .lang-toggle-nav");
     if(toggleBtn){
       e.preventDefault();
-      applyLanguage(currentLang === "fr" ? "en" : "fr");
+      var targetLang = currentLang === "fr" ? "en" : "fr";
+      var path = window.location.pathname;
+
+      if(targetLang === "en"){
+        if(path === "/" || path === "/index.html" || path.endsWith("/index.html") && path.indexOf("/en") === -1){
+          window.location.href = "/en/";
+          return;
+        } else if(path.indexOf("creation-site-web") !== -1){
+          window.location.href = "/en/web-development";
+          return;
+        } else if(path.indexOf("media-buying") !== -1){
+          window.location.href = "/en/media-buying";
+          return;
+        } else if(path.indexOf("creation-crm") !== -1){
+          window.location.href = "/en/custom-crm";
+          return;
+        } else if(path.indexOf("contact") !== -1){
+          window.location.href = "/en/contact";
+          return;
+        }
+      } else {
+        if(path.indexOf("/en/web-development") !== -1){
+          window.location.href = "/creation-site-web";
+          return;
+        } else if(path.indexOf("/en/media-buying") !== -1){
+          window.location.href = "/media-buying";
+          return;
+        } else if(path.indexOf("/en/custom-crm") !== -1){
+          window.location.href = "/creation-crm";
+          return;
+        } else if(path.indexOf("/en/contact") !== -1){
+          window.location.href = "/contact";
+          return;
+        } else if(path.indexOf("/en") !== -1){
+          window.location.href = "/";
+          return;
+        }
+      }
+
+      applyLanguage(targetLang);
     }
   });
 
