@@ -549,11 +549,11 @@
       "web.ctaBtn": 'Lancer mon site <span class="arr">→</span>',
       "web.ctaGhost": "Voir nos sites",
 
-      "ads.eyebrow": "Media Buying",
-      "ads.h1": 'Des campagnes qui <span class="hl">rapportent</span>, pas qui brûlent votre budget.',
-      "ads.sub": "Google Ads, Meta Ads et retargeting pilotés par la donnée. On optimise en continu pour baisser votre coût par acquisition et transformer votre trafic en clients.",
-      "ads.ctaBtn": 'Lancer mes campagnes <span class="arr">→</span>',
-      "ads.ctaGhost": "Voir la prestation",
+      "ads.eyebrow": "Media Buying & Acquisition Payante",
+      "ads.h1": 'Media Buying Haute Performance : Transformez vos dépenses publicitaires en <span class="hl">profit mesurable</span>.',
+      "ads.sub": "Le media buying n'est pas un coût opérationnel, c'est le levier de croissance le plus prévisible pour votre entreprise. En tant qu'agence media buying spécialisée en achat média digital et acquisition payante, Jobydoo Agency libère les marques du gaspillage publicitaire. Nous concevons, pilotons et optimisons vos campagnes sur Meta Ads, Google Ads et TikTok Ads grâce à une approche rigoureusement data-driven. Grâce à notre tracking server-side infaillible et à nos tests créatifs continus, nous réduisons durablement votre coût par acquisition pour propulser votre chiffre d'affaires.",
+      "ads.ctaBtn": 'Demander un audit Media Buying gratuit <span class="arr">→</span>',
+      "ads.ctaGhost": "Découvrir notre méthode",
 
       "crm.eyebrow": "CRM sur mesure",
       "crm.h1": 'Un CRM qui <span class="hl">pense comme votre équipe</span>.',
@@ -853,11 +853,11 @@
       "web.ctaBtn": 'Launch My Website <span class="arr">→</span>',
       "web.ctaGhost": "View Our Portfolio",
 
-      "ads.eyebrow": "Media Buying · Google & Meta Ads",
-      "ads.h1": 'Ad campaigns that <span class="hl">generate profit</span>, not waste your budget.',
-      "ads.sub": "Data-driven Google Ads, Meta Ads, and retargeting. We continuously optimize to lower your customer acquisition cost (CAC) and turn traffic into predictable sales.",
-      "ads.ctaBtn": 'Launch My Campaigns <span class="arr">→</span>',
-      "ads.ctaGhost": "Explore Services",
+      "ads.eyebrow": "Media Buying & Paid Acquisition",
+      "ads.h1": 'High-Performance Media Buying: Turn your ad spend into <span class="hl">predictable profit</span>.',
+      "ads.sub": "Media buying is not an expense—it is the most predictable growth engine for your business. As an elite media buying agency specializing in paid acquisition, Jobydoo Agency frees brands from wasted ad spend across Meta Ads, Google Ads, and TikTok Ads. Through rock-solid server-side tracking (CAPI) and continuous creative testing, we reliably lower your customer acquisition cost (CAC) and scale your revenue profitably.",
+      "ads.ctaBtn": 'Get a Free Media Buying Audit <span class="arr">→</span>',
+      "ads.ctaGhost": "Discover Our Methodology",
 
       "crm.eyebrow": "Custom CRM & Sales Automation",
       "crm.h1": 'A CRM that <span class="hl">thinks like your team</span>.',
