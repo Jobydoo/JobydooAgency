@@ -38,11 +38,69 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.jobydooagency.com/en/applications-general"/>
   </url>
   <url>
+    <loc>https://www.jobydooagency.com/pricing</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/pricing"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jobydooagency.com/en/pricing"/>
+  </url>
+  <url>
     <loc>https://www.jobydooagency.com/portfolio</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/portfolio"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.jobydooagency.com/en/portfolio"/>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/blog</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/blog"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jobydooagency.com/en/blog"/>
+  </url>
+  <!-- Blog Articles -->
+  <url>
+    <loc>https://www.jobydooagency.com/blog/creation-site-web-maroc-guide</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/blog/creation-site-web-maroc-guide"/>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/blog/agence-web-casablanca</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/blog/agence-web-casablanca"/>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/blog/agence-marketing-digital-maroc</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/blog/agence-marketing-digital-maroc"/>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/blog/creation-site-web-rabat</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/blog/creation-site-web-rabat"/>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/blog/creation-site-web-marrakech</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/blog/creation-site-web-marrakech"/>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/blog/agence-seo-casablanca</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/blog/agence-seo-casablanca"/>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/a-propos</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/a-propos"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jobydooagency.com/en/a-propos"/>
   </url>
   <url>
     <loc>https://www.jobydooagency.com/faqs</loc>
