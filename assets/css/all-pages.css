@@ -5,17 +5,17 @@
  * Palette: --bg:#0a0e1abb, --accent:#10b981, --amber:#fbbf24
  * ===================================================================== */
 :root{
-  --bg:#0a0e1a;
-  --bg-2:#111827;
-  --bg-3:#1a2235;
-  --bg-card:#151c2e;
-  --border:rgba(255,255,255,.08);
-  --text:#e8edf5;
-  --text-dim:rgba(232,237,245,.65);
-  --accent:#10b981;
-  --accent-2:#22d3ee;
-  --amber:#fbbf24;
-  --red:#ef4444;
+  --bg:#141210;
+  --bg-2:#1a1714;
+  --bg-3:#211c18;
+  --bg-card:#1c1814;
+  --border:rgba(212,163,115,.16);
+  --text:#fcf9f5;
+  --text-dim:#d4c7b8;
+  --accent:#d4a373;
+  --accent-2:#b8834c;
+  --amber:#e0a96d;
+  --red:#e76f51;
   --radius:10px;
   --maxw:1100px;
 }
