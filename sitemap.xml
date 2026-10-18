@@ -43,6 +43,22 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jobydooagency.com/creation-crm"/>
   </url>
   <url>
+    <loc>https://www.jobydooagency.com/solutions-metiers</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/solutions-metiers"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jobydooagency.com/solutions-metiers"/>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/logiciels-sur-mesure</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/logiciels-sur-mesure"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jobydooagency.com/logiciels-sur-mesure"/>
+  </url>
+  <url>
     <loc>https://www.jobydooagency.com/applications-general</loc>
     <lastmod>2026-10-10</lastmod>
     <changefreq>weekly</changefreq>
