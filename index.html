@@ -39,6 +39,41 @@
   "sameAs":["https://www.moroccodeserttrips.com"]
 }
 </script>
+<style>
+.nav-dropdown-wrapper { position: relative; }
+.nav-dropdown-wrapper:hover .nav-dropdown-content { display: block !important; }
+.nav-dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 260px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  padding: 6px;
+  z-index: 999;
+  text-align: left;
+}
+.nav-dropdown-item {
+  display: flex !important;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 10px !important;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.15s ease;
+}
+.nav-dropdown-item:hover {
+  background: #fef3c7 !important;
+}
+.nav-dropdown-item::after { display: none !important; }
+.nav-ico {
+  font-size: 16px;
+  line-height: 1;
+}
+</style>
 </head>
 <body>
 
@@ -51,7 +86,24 @@
       <li><a href="/creation-site-web" data-i18n="nav.web">Création de site web</a></li>
       <li><a href="/media-buying" data-i18n="nav.ads">Media Buying</a></li>
       <li><a href="/creation-crm" data-i18n="nav.crm">CRM sur mesure</a></li>
-      <li><a href="/solutions-metiers" style="color:#d97706;font-weight:700;">Solutions Métiers ⚡</a></li>
+      <li class="nav-dropdown-wrapper">
+        <a href="/solutions-metiers" style="color:#d97706;font-weight:700;display:inline-flex;align-items:center;gap:3px;">
+          <span>Solutions Métiers ⚡</span>
+          <span style="font-size:9px;opacity:0.8;">▼</span>
+        </a>
+        <div class="nav-dropdown-content">
+          <a href="/logiciel-avocat" class="nav-dropdown-item"><span class="nav-ico">⚖️</span><div><strong style="display:block;font-size:12px;color:#0f172a;line-height:1.2;">Avocats & Notaires</strong><span style="display:block;font-size:10px;color:#64748b;font-weight:normal;">JurisPro™ Legal</span></div></a>
+          <a href="/logiciel-dentiste" class="nav-dropdown-item"><span class="nav-ico">🦷</span><div><strong style="display:block;font-size:12px;color:#0f172a;line-height:1.2;">Cabinets Dentaires</strong><span style="display:block;font-size:10px;color:#64748b;font-weight:normal;">DentaSuite™ Pro</span></div></a>
+          <a href="/logiciel-medecin" class="nav-dropdown-item"><span class="nav-ico">🩺</span><div><strong style="display:block;font-size:12px;color:#0f172a;line-height:1.2;">Médecins & Cliniques</strong><span style="display:block;font-size:10px;color:#64748b;font-weight:normal;">MediCare Hub™</span></div></a>
+          <a href="/logiciel-location-voiture" class="nav-dropdown-item"><span class="nav-ico">🚗</span><div><strong style="display:block;font-size:12px;color:#0f172a;line-height:1.2;">Location de Voitures</strong><span style="display:block;font-size:10px;color:#64748b;font-weight:normal;">FlotteDrive™ Manager</span></div></a>
+          <a href="/logiciel-immobilier" class="nav-dropdown-item"><span class="nav-ico">🏢</span><div><strong style="display:block;font-size:12px;color:#0f172a;line-height:1.2;">Agences Immobilières</strong><span style="display:block;font-size:10px;color:#64748b;font-weight:normal;">ImmoMaster™ Suite</span></div></a>
+          <div style="border-top:1px solid #f1f5f9;margin:4px 0;"></div>
+          <a href="/solutions-metiers" style="display:flex;justify-content:space-between;align-items:center;padding:6px 10px;font-size:11px;font-weight:700;color:#d97706;text-decoration:none;border-radius:6px;">
+            <span>Toutes les solutions (5)</span>
+            <span>→</span>
+          </a>
+        </div>
+      </li>
       <li><a href="/applications-general" data-i18n="nav.apps">Applications générales</a></li>
       <li><a href="/pricing" data-i18n="nav.pricing">Tarifs</a></li>
       <li><a href="/portfolio" data-i18n="nav.portfolio">Portfolio</a></li>

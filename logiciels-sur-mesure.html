@@ -176,9 +176,46 @@
       </a>
 
       <!-- Desktop Nav Links -->
-      <nav class="hidden lg:flex items-center gap-4 xl:gap-6 text-xs font-bold uppercase tracking-wider text-slate-600">
+      <nav class="hidden lg:flex items-center gap-4 xl:gap-5 text-xs font-bold uppercase tracking-wider text-slate-600">
         <a href="/" class="hover:text-slate-900 transition-colors whitespace-nowrap">Accueil</a>
-        <a href="#solutions" class="text-amber-600 hover:text-amber-700 transition-colors whitespace-nowrap">Les 5 Logiciels</a>
+
+        <!-- Submenu Dropdown -->
+        <div class="relative group">
+          <button class="flex items-center gap-1 text-amber-700 hover:text-amber-800 transition-colors py-2 whitespace-nowrap font-extrabold">
+            <span>Solutions Métiers ⚡</span>
+            <svg class="w-3.5 h-3.5 text-amber-600 group-hover:text-amber-800 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </button>
+          <div class="absolute left-0 top-full pt-1 hidden group-hover:block z-50 min-w-[270px]">
+            <div class="bg-white rounded-2xl shadow-xl border border-slate-200 p-2 text-left normal-case space-y-1">
+              <a href="/logiciel-avocat" class="flex items-center gap-2.5 px-3 py-2 rounded-xl hover:bg-amber-50 text-slate-800 hover:text-amber-900 transition-colors">
+                <span class="text-base">⚖️</span>
+                <div><div class="font-bold text-xs">Avocats & Notaires</div><div class="text-[10px] text-slate-400 font-normal">JurisPro™ Legal Suite</div></div>
+              </a>
+              <a href="/logiciel-dentiste" class="flex items-center gap-2.5 px-3 py-2 rounded-xl hover:bg-cyan-50 text-slate-800 hover:text-cyan-900 transition-colors">
+                <span class="text-base">🦷</span>
+                <div><div class="font-bold text-xs">Dentistes & Prothésistes</div><div class="text-[10px] text-slate-400 font-normal">DentaSuite™ Pro</div></div>
+              </a>
+              <a href="/logiciel-medecin" class="flex items-center gap-2.5 px-3 py-2 rounded-xl hover:bg-emerald-50 text-slate-800 hover:text-emerald-900 transition-colors">
+                <span class="text-base">🩺</span>
+                <div><div class="font-bold text-xs">Médecins & Cliniques</div><div class="text-[10px] text-slate-400 font-normal">MediCare Hub™</div></div>
+              </a>
+              <a href="/logiciel-location-voiture" class="flex items-center gap-2.5 px-3 py-2 rounded-xl hover:bg-blue-50 text-slate-800 hover:text-blue-900 transition-colors">
+                <span class="text-base">🚗</span>
+                <div><div class="font-bold text-xs">Location de Voitures</div><div class="text-[10px] text-slate-400 font-normal">FlotteDrive™ Manager</div></div>
+              </a>
+              <a href="/logiciel-immobilier" class="flex items-center gap-2.5 px-3 py-2 rounded-xl hover:bg-violet-50 text-slate-800 hover:text-violet-900 transition-colors">
+                <span class="text-base">🏢</span>
+                <div><div class="font-bold text-xs">Agences Immobilières</div><div class="text-[10px] text-slate-400 font-normal">ImmoMaster™ Suite</div></div>
+              </a>
+              <div class="border-t border-slate-100 my-1"></div>
+              <a href="#solutions" class="flex items-center justify-between px-3 py-1.5 rounded-lg text-[11px] font-bold text-amber-700 hover:bg-amber-50 transition-colors">
+                <span>Voir les 5 tableaux de bord</span>
+                <span>↓</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
         <a href="#simulateur" class="hover:text-slate-900 transition-colors whitespace-nowrap">Simulateur ROI</a>
         <a href="#processus" class="hover:text-slate-900 transition-colors whitespace-nowrap">Processus</a>
         <a href="#comparatif" class="hover:text-slate-900 transition-colors whitespace-nowrap">Comparatif</a>
@@ -319,39 +356,49 @@
 
         <!-- 1. Cabinets d'Avocats & Droit -->
         <div id="card-avocats" class="solution-card bg-white border border-slate-200/90 hover:border-amber-400 rounded-3xl p-6 sm:p-8 lg:p-10 transition-all duration-300 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center shadow-md hover:shadow-xl">
-          <div class="lg:col-span-7 space-y-5">
+          <div class="lg:col-span-7 space-y-6">
             <div class="flex items-center gap-3">
               <span class="w-10 h-10 rounded-xl bg-amber-100 border border-amber-300 flex items-center justify-center text-xl">⚖️</span>
               <span class="text-xs font-mono font-bold uppercase text-amber-900 bg-amber-100/90 px-3 py-1 rounded-full border border-amber-300">Cabinets d'Avocats &amp; Notaires</span>
             </div>
-            <h3 class="font-display font-extrabold text-2xl sm:text-3xl text-slate-900">
-              JurisPro™ Legal Suite
-            </h3>
-            <div class="bg-rose-50 border-l-4 border-rose-500 p-4 rounded-r-xl">
-              <p class="text-xs font-bold text-rose-800 uppercase tracking-wider mb-1">Le Problème Critique Résolu :</p>
-              <p class="text-sm text-slate-700 leading-relaxed">
-                Dispersion des conclusions et pièces, risque d'omission d'une audience ou d'un délai de prescription fatidique, et jusqu'à 20% d'honoraires non facturés par manque de suivi rigoureux du temps passé.
+            
+            <div>
+              <h3 class="font-display font-extrabold text-2xl sm:text-3xl text-slate-900">
+                JurisPro™ Legal Suite
+              </h3>
+              <p class="text-slate-600 text-sm sm:text-base mt-2 leading-relaxed">
+                Centralisez vos affaires judiciaires, automatisez vos délais d'audience et sécurisez vos honoraires CARPA dans une solution unique sans abonnement mensuel.
               </p>
             </div>
-            <div>
-              <p class="text-xs font-bold font-mono text-slate-500 uppercase tracking-wider mb-3">Fonctionnalités Clés Intégrées :</p>
-              <ul class="space-y-2 text-sm text-slate-700">
-                <li class="flex items-start gap-2.5"><span class="text-amber-600 font-bold mt-0.5 flex-shrink-0">✔</span> <strong>Gestion centralisée des affaires :</strong> dossiers contentieux/conseil, clients, adversaires et chrono-pièces.</li>
-                <li class="flex items-start gap-2.5"><span class="text-amber-600 font-bold mt-0.5 flex-shrink-0">✔</span> <strong>Calendrier judiciaire automatisé :</strong> alertes d'audiences, vacations, délibérés et délais de recours.</li>
-                <li class="flex items-start gap-2.5"><span class="text-amber-600 font-bold mt-0.5 flex-shrink-0">✔</span> <strong>Facturation &amp; Honoraires :</strong> calcul au temps passé ou forfait, provisions, carnet CARPA et relances.</li>
-                <li class="flex items-start gap-2.5"><span class="text-amber-600 font-bold mt-0.5 flex-shrink-0">✔</span> <strong>Coffre-fort chiffré &amp; Portail client :</strong> archivage sécurisé des pièces et accès confidentiel pour le justiciable.</li>
-              </ul>
+
+            <!-- Points clés aérés et concis -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div class="flex items-center gap-2.5 text-xs sm:text-sm text-slate-800 bg-slate-50 border border-slate-200/80 p-3 rounded-xl">
+                <span class="text-amber-600 font-bold text-base flex-shrink-0">✔</span>
+                <span><strong>Affaires 360° :</strong> Dossiers &amp; pièces classés</span>
+              </div>
+              <div class="flex items-center gap-2.5 text-xs sm:text-sm text-slate-800 bg-slate-50 border border-slate-200/80 p-3 rounded-xl">
+                <span class="text-amber-600 font-bold text-base flex-shrink-0">✔</span>
+                <span><strong>Agenda :</strong> Alertes délais d'audiences</span>
+              </div>
+              <div class="flex items-center gap-2.5 text-xs sm:text-sm text-slate-800 bg-slate-50 border border-slate-200/80 p-3 rounded-xl">
+                <span class="text-amber-600 font-bold text-base flex-shrink-0">✔</span>
+                <span><strong>Honoraires :</strong> Facturation temps &amp; CARPA</span>
+              </div>
+              <div class="flex items-center gap-2.5 text-xs sm:text-sm text-slate-800 bg-slate-50 border border-slate-200/80 p-3 rounded-xl">
+                <span class="text-amber-600 font-bold text-base flex-shrink-0">✔</span>
+                <span><strong>Sécurité :</strong> Chiffrement fort AES-256</span>
+              </div>
             </div>
-            <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs text-slate-600">
-              <strong class="text-slate-900">Mode de Déploiement :</strong> Web Cloud souverain ou local · Raccourci PWA (PC, Mac, iPad) · Droits stricts (Associé, Collaborateur, Secrétariat juridique).
-            </div>
-            <div class="pt-2 flex flex-wrap gap-4">
-              <button onclick="openDemoModal('avocat')" class="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-black font-extrabold text-sm px-6 py-3 rounded-xl transition-all shadow-md shadow-amber-500/20">
-                Tester la démo JurisPro en direct →
-              </button>
-              <a href="https://wa.me/212645833671?text=Bonjour%20Jobydoo%2C%20je%20souhaite%20d%C3%A9couvrir%20la%20d%C3%A9mo%20de%20JurisPro%20Legal%20Suite%20pour%20mon%20cabinet%20d%27avocat." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold text-sm px-5 py-3 rounded-xl border border-slate-200 transition-all">
-                Demander un devis rapide
+
+            <div class="pt-2 flex flex-wrap items-center gap-3">
+              <a href="/logiciel-avocat" class="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-400 text-black font-extrabold text-sm px-6 py-3.5 rounded-full transition-all shadow-md shadow-amber-500/20">
+                <span>Découvrir JurisPro™ (Page Dédiée)</span>
+                <span>→</span>
               </a>
+              <button onclick="openDemoModal('avocat')" class="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold text-sm px-5 py-3.5 rounded-full border border-slate-200 transition-all">
+                <span>Tester la démo</span>
+              </button>
             </div>
           </div>
 
@@ -388,39 +435,49 @@
 
         <!-- 2. Cabinets Dentaires & Prothésistes -->
         <div id="card-dentistes" class="solution-card bg-white border border-slate-200/90 hover:border-cyan-400 rounded-3xl p-6 sm:p-8 lg:p-10 transition-all duration-300 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center shadow-md hover:shadow-xl">
-          <div class="lg:col-span-7 space-y-5">
+          <div class="lg:col-span-7 space-y-6">
             <div class="flex items-center gap-3">
               <span class="w-10 h-10 rounded-xl bg-cyan-100 border border-cyan-300 flex items-center justify-center text-xl">🦷</span>
               <span class="text-xs font-mono font-bold uppercase text-cyan-900 bg-cyan-100/90 px-3 py-1 rounded-full border border-cyan-300">Cabinets Dentaires &amp; Prothésistes</span>
             </div>
-            <h3 class="font-display font-extrabold text-2xl sm:text-3xl text-slate-900">
-              DentaSuite™ Pro
-            </h3>
-            <div class="bg-rose-50 border-l-4 border-rose-500 p-4 rounded-r-xl">
-              <p class="text-xs font-bold text-rose-800 uppercase tracking-wider mb-1">Le Problème Critique Résolu :</p>
-              <p class="text-sm text-slate-700 leading-relaxed">
-                Retards d'essayages prothétiques qui bloquent les fauteuils, traçabilité des stérilisations et fiches papiers introuvables au moment où le patient est assis au fauteuil.
+            
+            <div>
+              <h3 class="font-display font-extrabold text-2xl sm:text-3xl text-slate-900">
+                DentaSuite™ Pro
+              </h3>
+              <p class="text-slate-600 text-sm sm:text-base mt-2 leading-relaxed">
+                Visualisez la bouche de vos patients en 3D, suivez vos travaux de prothèses avec le laboratoire et gérez votre planning multi-fauteuils en toute sérénité.
               </p>
             </div>
-            <div>
-              <p class="text-xs font-bold font-mono text-slate-500 uppercase tracking-wider mb-3">Fonctionnalités Clés Intégrées :</p>
-              <ul class="space-y-2 text-sm text-slate-700">
-                <li class="flex items-start gap-2.5"><span class="text-cyan-600 font-bold mt-0.5 flex-shrink-0">✔</span> <strong>Odontogramme 3D interactif :</strong> saisie clinique par dent en 2 clics (carie, couronne, implant, détartrage).</li>
-                <li class="flex items-start gap-2.5"><span class="text-cyan-600 font-bold mt-0.5 flex-shrink-0">✔</span> <strong>Suivi prothétique en direct :</strong> liaison laboratoire (empreinte, essayage, date de livraison garantie).</li>
-                <li class="flex items-start gap-2.5"><span class="text-cyan-600 font-bold mt-0.5 flex-shrink-0">✔</span> <strong>Agenda multi-fauteuils &amp; rappels WhatsApp :</strong> élimination de 80% des rendez-vous oubliés.</li>
-                <li class="flex items-start gap-2.5"><span class="text-cyan-600 font-bold mt-0.5 flex-shrink-0">✔</span> <strong>Traçabilité &amp; Encaissements :</strong> étiquettes stérilisation, devis normalisés et suivi des règlements échelonnés.</li>
-              </ul>
+
+            <!-- Points clés aérés et concis -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div class="flex items-center gap-2.5 text-xs sm:text-sm text-slate-800 bg-slate-50 border border-slate-200/80 p-3 rounded-xl">
+                <span class="text-cyan-600 font-bold text-base flex-shrink-0">✔</span>
+                <span><strong>Odontogramme 3D :</strong> Saisie clinique tactile</span>
+              </div>
+              <div class="flex items-center gap-2.5 text-xs sm:text-sm text-slate-800 bg-slate-50 border border-slate-200/80 p-3 rounded-xl">
+                <span class="text-cyan-600 font-bold text-base flex-shrink-0">✔</span>
+                <span><strong>Suivi Prothèses :</strong> Liaison laboratoire directe</span>
+              </div>
+              <div class="flex items-center gap-2.5 text-xs sm:text-sm text-slate-800 bg-slate-50 border border-slate-200/80 p-3 rounded-xl">
+                <span class="text-cyan-600 font-bold text-base flex-shrink-0">✔</span>
+                <span><strong>Fauteuils :</strong> Agenda &amp; rappels WhatsApp</span>
+              </div>
+              <div class="flex items-center gap-2.5 text-xs sm:text-sm text-slate-800 bg-slate-50 border border-slate-200/80 p-3 rounded-xl">
+                <span class="text-cyan-600 font-bold text-base flex-shrink-0">✔</span>
+                <span><strong>Traçabilité :</strong> Stérilisation &amp; devis</span>
+              </div>
             </div>
-            <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs text-slate-600">
-              <strong class="text-slate-900">Mode de Déploiement :</strong> Réseau local cabinet ou Cloud sécurisé · Écran tactile fauteuil ou tablette · Multi-postes (Praticiens, Assistantes, Prothésistes).
-            </div>
-            <div class="pt-2 flex flex-wrap gap-4">
-              <button onclick="openDemoModal('dentiste')" class="inline-flex items-center gap-2 bg-cyan-500 hover:bg-cyan-400 text-black font-extrabold text-sm px-6 py-3 rounded-xl transition-all shadow-md shadow-cyan-500/20">
-                Tester la démo DentaSuite en direct →
-              </button>
-              <a href="https://wa.me/212645833671?text=Bonjour%20Jobydoo%2C%20je%20souhaite%20une%20d%C3%A9mo%20de%20DentaSuite%20Pro%20pour%20mon%20cabinet%20dentaire." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold text-sm px-5 py-3 rounded-xl border border-slate-200 transition-all">
-                Demander un devis rapide
+
+            <div class="pt-2 flex flex-wrap items-center gap-3">
+              <a href="/logiciel-dentiste" class="inline-flex items-center gap-2 bg-cyan-600 hover:bg-cyan-500 text-white font-extrabold text-sm px-6 py-3.5 rounded-full transition-all shadow-md shadow-cyan-600/20">
+                <span>Découvrir DentaSuite™ (Page Dédiée)</span>
+                <span>→</span>
               </a>
+              <button onclick="openDemoModal('dentiste')" class="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold text-sm px-5 py-3.5 rounded-full border border-slate-200 transition-all">
+                <span>Tester la démo</span>
+              </button>
             </div>
           </div>
 
@@ -457,39 +514,49 @@
 
         <!-- 3. Cabinets Médicaux & Cliniques -->
         <div id="card-medecins" class="solution-card bg-white border border-slate-200/90 hover:border-emerald-400 rounded-3xl p-6 sm:p-8 lg:p-10 transition-all duration-300 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center shadow-md hover:shadow-xl">
-          <div class="lg:col-span-7 space-y-5">
+          <div class="lg:col-span-7 space-y-6">
             <div class="flex items-center gap-3">
               <span class="w-10 h-10 rounded-xl bg-emerald-100 border border-emerald-300 flex items-center justify-center text-xl">🩺</span>
               <span class="text-xs font-mono font-bold uppercase text-emerald-900 bg-emerald-100/90 px-3 py-1 rounded-full border border-emerald-300">Cabinets Médicaux &amp; Cliniques</span>
             </div>
-            <h3 class="font-display font-extrabold text-2xl sm:text-3xl text-slate-900">
-              MediCare Hub™
-            </h3>
-            <div class="bg-rose-50 border-l-4 border-rose-500 p-4 rounded-r-xl">
-              <p class="text-xs font-bold text-rose-800 uppercase tracking-wider mb-1">Le Problème Critique Résolu :</p>
-              <p class="text-sm text-slate-700 leading-relaxed">
-                Salles d'attente saturées, lenteur de saisie manuelle des ordonnances et bilans, perte des antécédents médicaux et tensions constantes à l'accueil téléphonique.
+            
+            <div>
+              <h3 class="font-display font-extrabold text-2xl sm:text-3xl text-slate-900">
+                MediCare Hub™
+              </h3>
+              <p class="text-slate-600 text-sm sm:text-base mt-2 leading-relaxed">
+                Accélérez vos consultations : historique patient 360°, ordonnances sécurisées en 2 clics et salle d'attente connectée pour zéro temps perdu.
               </p>
             </div>
-            <div>
-              <p class="text-xs font-bold font-mono text-slate-500 uppercase tracking-wider mb-3">Fonctionnalités Clés Intégrées :</p>
-              <ul class="space-y-2 text-sm text-slate-700">
-                <li class="flex items-start gap-2.5"><span class="text-emerald-600 font-bold mt-0.5 flex-shrink-0">✔</span> <strong>Dossier Patient Informatisé (DPI) 360° :</strong> constantes, allergies en surbrillance, radios et antécédents.</li>
-                <li class="flex items-start gap-2.5"><span class="text-emerald-600 font-bold mt-0.5 flex-shrink-0">✔</span> <strong>Générateur d'ordonnances express :</strong> dictionnaire thérapeutique, posologies automatiques et signature numérique.</li>
-                <li class="flex items-start gap-2.5"><span class="text-emerald-600 font-bold mt-0.5 flex-shrink-0">✔</span> <strong>Agenda en ligne &amp; filtrage :</strong> qualification des motifs de consultation et rappels automatiques.</li>
-                <li class="flex items-start gap-2.5"><span class="text-emerald-600 font-bold mt-0.5 flex-shrink-0">✔</span> <strong>File d'attente &amp; Secret Médical :</strong> appel patient discret sur écran et export immédiat de courriers confrères.</li>
-              </ul>
+
+            <!-- Points clés aérés et concis -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div class="flex items-center gap-2.5 text-xs sm:text-sm text-slate-800 bg-slate-50 border border-slate-200/80 p-3 rounded-xl">
+                <span class="text-emerald-600 font-bold text-base flex-shrink-0">✔</span>
+                <span><strong>DPI 360° :</strong> Dossier médical complet</span>
+              </div>
+              <div class="flex items-center gap-2.5 text-xs sm:text-sm text-slate-800 bg-slate-50 border border-slate-200/80 p-3 rounded-xl">
+                <span class="text-emerald-600 font-bold text-base flex-shrink-0">✔</span>
+                <span><strong>Ordonnances :</strong> Générateur express 2 clics</span>
+              </div>
+              <div class="flex items-center gap-2.5 text-xs sm:text-sm text-slate-800 bg-slate-50 border border-slate-200/80 p-3 rounded-xl">
+                <span class="text-emerald-600 font-bold text-base flex-shrink-0">✔</span>
+                <span><strong>Salle d'attente :</strong> File dynamique &amp; rappels</span>
+              </div>
+              <div class="flex items-center gap-2.5 text-xs sm:text-sm text-slate-800 bg-slate-50 border border-slate-200/80 p-3 rounded-xl">
+                <span class="text-emerald-600 font-bold text-base flex-shrink-0">✔</span>
+                <span><strong>Secret Médical :</strong> Hébergement certifié</span>
+              </div>
             </div>
-            <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs text-slate-600">
-              <strong class="text-slate-900">Mode de Déploiement :</strong> Hébergement certifié données de santé · Tablettes tactiles praticiens &amp; postes secrétariat médical.
-            </div>
-            <div class="pt-2 flex flex-wrap gap-4">
-              <button onclick="openDemoModal('medecin')" class="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-400 text-black font-extrabold text-sm px-6 py-3 rounded-xl transition-all shadow-md shadow-emerald-500/20">
-                Tester la démo MediCare en direct →
-              </button>
-              <a href="https://wa.me/212645833671?text=Bonjour%20Jobydoo%2C%20je%20souhaite%20une%20d%C3%A9mo%20de%20MediCare%20Hub%20pour%20mon%20cabinet%20m%C3%A9dical." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold text-sm px-5 py-3 rounded-xl border border-slate-200 transition-all">
-                Demander un devis rapide
+
+            <div class="pt-2 flex flex-wrap items-center gap-3">
+              <a href="/logiciel-medecin" class="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-sm px-6 py-3.5 rounded-full transition-all shadow-md shadow-emerald-600/20">
+                <span>Découvrir MediCare™ (Page Dédiée)</span>
+                <span>→</span>
               </a>
+              <button onclick="openDemoModal('medecin')" class="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold text-sm px-5 py-3.5 rounded-full border border-slate-200 transition-all">
+                <span>Tester la démo</span>
+              </button>
             </div>
           </div>
 
@@ -525,40 +592,50 @@
         </div>
 
         <!-- 4. Agences de Location de Voitures -->
-        <div id="card-location" class="solution-card bg-white border border-slate-200/90 hover:border-pink-400 rounded-3xl p-6 sm:p-8 lg:p-10 transition-all duration-300 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center shadow-md hover:shadow-xl">
-          <div class="lg:col-span-7 space-y-5">
+        <div id="card-location" class="solution-card bg-white border border-slate-200/90 hover:border-blue-400 rounded-3xl p-6 sm:p-8 lg:p-10 transition-all duration-300 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center shadow-md hover:shadow-xl">
+          <div class="lg:col-span-7 space-y-6">
             <div class="flex items-center gap-3">
-              <span class="w-10 h-10 rounded-xl bg-pink-100 border border-pink-300 flex items-center justify-center text-xl">🚗</span>
-              <span class="text-xs font-mono font-bold uppercase text-pink-900 bg-pink-100/90 px-3 py-1 rounded-full border border-pink-300">Agences de Location de Voitures</span>
+              <span class="w-10 h-10 rounded-xl bg-blue-100 border border-blue-300 flex items-center justify-center text-xl">🚗</span>
+              <span class="text-xs font-mono font-bold uppercase text-blue-900 bg-blue-100/90 px-3 py-1 rounded-full border border-blue-300">Agences de Location de Voitures</span>
             </div>
-            <h3 class="font-display font-extrabold text-2xl sm:text-3xl text-slate-900">
-              FlotteDrive™ Manager
-            </h3>
-            <div class="bg-rose-50 border-l-4 border-rose-500 p-4 rounded-r-xl">
-              <p class="text-xs font-bold text-rose-800 uppercase tracking-wider mb-1">Le Problème Critique Résolu :</p>
-              <p class="text-sm text-slate-700 leading-relaxed">
-                Litiges interminables au retour du véhicule pour rayures contestées, oublis de vidange ou d'expiration d'assurance et double-réservations qui immobilisent votre flotte.
+            
+            <div>
+              <h3 class="font-display font-extrabold text-2xl sm:text-3xl text-slate-900">
+                FlotteDrive™ Manager
+              </h3>
+              <p class="text-slate-600 text-sm sm:text-base mt-2 leading-relaxed">
+                Louez plus vite en éliminant les litiges : contrats avec signature sur smartphone, photos d'état des lieux horodatées et alertes automatiques d'entretien.
               </p>
             </div>
-            <div>
-              <p class="text-xs font-bold font-mono text-slate-500 uppercase tracking-wider mb-3">Fonctionnalités Clés Intégrées :</p>
-              <ul class="space-y-2 text-sm text-slate-700">
-                <li class="flex items-start gap-2.5"><span class="text-pink-600 font-bold mt-0.5 flex-shrink-0">✔</span> <strong>Planning de flotte interactif :</strong> statuts en direct (Disponible, En location, Maintenance, Nettoyage).</li>
-                <li class="flex items-start gap-2.5"><span class="text-pink-600 font-bold mt-0.5 flex-shrink-0">✔</span> <strong>Contrat numérique sur tablette/smartphone :</strong> scan CIN/Permis et signature électronique immédiate.</li>
-                <li class="flex items-start gap-2.5"><span class="text-pink-600 font-bold mt-0.5 flex-shrink-0">✔</span> <strong>État des lieux photos horodaté :</strong> schéma carrosserie tactile avant/après infalsifiable.</li>
-                <li class="flex items-start gap-2.5"><span class="text-pink-600 font-bold mt-0.5 flex-shrink-0">✔</span> <strong>Alertes prédictives &amp; Cautions :</strong> fin d'assurance, contrôle technique, vidange et gestion des dépôts de garantie.</li>
-              </ul>
+
+            <!-- Points clés aérés et concis -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div class="flex items-center gap-2.5 text-xs sm:text-sm text-slate-800 bg-slate-50 border border-slate-200/80 p-3 rounded-xl">
+                <span class="text-blue-600 font-bold text-base flex-shrink-0">✔</span>
+                <span><strong>Flotte Direct :</strong> Planning &amp; disponibilités réelles</span>
+              </div>
+              <div class="flex items-center gap-2.5 text-xs sm:text-sm text-slate-800 bg-slate-50 border border-slate-200/80 p-3 rounded-xl">
+                <span class="text-blue-600 font-bold text-base flex-shrink-0">✔</span>
+                <span><strong>Contrats Mobile :</strong> Signature sur smartphone</span>
+              </div>
+              <div class="flex items-center gap-2.5 text-xs sm:text-sm text-slate-800 bg-slate-50 border border-slate-200/80 p-3 rounded-xl">
+                <span class="text-blue-600 font-bold text-base flex-shrink-0">✔</span>
+                <span><strong>État des Lieux :</strong> Photos horodatées sans litige</span>
+              </div>
+              <div class="flex items-center gap-2.5 text-xs sm:text-sm text-slate-800 bg-slate-50 border border-slate-200/80 p-3 rounded-xl">
+                <span class="text-blue-600 font-bold text-base flex-shrink-0">✔</span>
+                <span><strong>Maintenance :</strong> Alertes vidange &amp; assurance</span>
+              </div>
             </div>
-            <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs text-slate-600">
-              <strong class="text-slate-900">Mode de Déploiement :</strong> Web comptoir + PWA mobile pour les agents de piste sur le parking (même sans connexion 4G).
-            </div>
-            <div class="pt-2 flex flex-wrap gap-4">
-              <button onclick="openDemoModal('flotte')" class="inline-flex items-center gap-2 bg-pink-500 hover:bg-pink-400 text-white font-extrabold text-sm px-6 py-3 rounded-xl transition-all shadow-md shadow-pink-500/20">
-                Tester la démo FlotteDrive en direct →
-              </button>
-              <a href="https://wa.me/212645833671?text=Bonjour%20Jobydoo%2C%20je%20souhaite%20une%20d%C3%A9mo%20de%20FlotteDrive%20Manager%20pour%20mon%20agence%20de%20location." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold text-sm px-5 py-3 rounded-xl border border-slate-200 transition-all">
-                Demander un devis rapide
+
+            <div class="pt-2 flex flex-wrap items-center gap-3">
+              <a href="/logiciel-location-voiture" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-extrabold text-sm px-6 py-3.5 rounded-full transition-all shadow-md shadow-blue-600/20">
+                <span>Découvrir FlotteDrive™ (Page Dédiée)</span>
+                <span>→</span>
               </a>
+              <button onclick="openDemoModal('flotte')" class="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold text-sm px-5 py-3.5 rounded-full border border-slate-200 transition-all">
+                <span>Tester la démo</span>
+              </button>
             </div>
           </div>
 
@@ -566,12 +643,12 @@
           <div class="lg:col-span-5 bg-slate-100/90 border border-slate-200 rounded-2xl p-4 space-y-3 shadow-sm">
             <div class="flex items-center justify-between pb-2 border-b border-slate-200 text-xs">
               <div class="flex gap-1.5"><span class="w-3 h-3 rounded-full bg-rose-500"></span><span class="w-3 h-3 rounded-full bg-amber-400"></span><span class="w-3 h-3 rounded-full bg-emerald-500"></span></div>
-              <span class="text-pink-800 text-[11px] font-bold font-mono">● SUPERVISION PARC AUTO</span>
+              <span class="text-blue-800 text-[11px] font-bold font-mono">● SUPERVISION PARC AUTO</span>
             </div>
 
             <!-- Image Switcher Tabs -->
             <div class="flex gap-2">
-              <button id="tab-flotte-1" onclick="switchDashboardImg('flotte', '/dashboards/location-fleet.png', 'FlotteDrive™ Manager — Gestion de Flotte & Parc', this)" class="img-tab active flex-1 py-1.5 px-2 rounded-lg text-xs border border-slate-300 text-center transition-all bg-white font-bold text-pink-800">
+              <button id="tab-flotte-1" onclick="switchDashboardImg('flotte', '/dashboards/location-fleet.png', 'FlotteDrive™ Manager — Gestion de Flotte & Parc', this)" class="img-tab active flex-1 py-1.5 px-2 rounded-lg text-xs border border-slate-300 text-center transition-all bg-white font-bold text-blue-800">
                 Planning du Parc
               </button>
               <button id="tab-flotte-2" onclick="switchDashboardImg('flotte', '/dashboards/location-contracts.png', 'FlotteDrive™ Manager — Contrats Numériques & Dépôts', this)" class="img-tab flex-1 py-1.5 px-2 rounded-lg text-xs border border-transparent text-slate-600 hover:text-slate-900 text-center transition-all">
@@ -587,47 +664,57 @@
             </div>
             <div class="grid grid-cols-3 gap-2 text-center text-xs">
               <div class="bg-white border border-slate-200/80 p-2 rounded-lg shadow-2xs"><p class="text-slate-400 text-[10px]">Parc Total</p><p class="text-slate-900 font-bold">34 Voitures</p></div>
-              <div class="bg-white border border-slate-200/80 p-2 rounded-lg shadow-2xs"><p class="text-slate-400 text-[10px]">Taux Loué</p><p class="text-pink-600 font-bold">91 %</p></div>
+              <div class="bg-white border border-slate-200/80 p-2 rounded-lg shadow-2xs"><p class="text-slate-400 text-[10px]">Taux Loué</p><p class="text-blue-600 font-bold">91 %</p></div>
               <div class="bg-white border border-slate-200/80 p-2 rounded-lg shadow-2xs"><p class="text-slate-400 text-[10px]">Litiges</p><p class="text-emerald-600 font-bold">0 Contesté</p></div>
             </div>
           </div>
         </div>
 
         <!-- 5. Agences Immobilières & Promoteurs -->
-        <div id="card-immo" class="solution-card bg-white border border-slate-200/90 hover:border-purple-400 rounded-3xl p-6 sm:p-8 lg:p-10 transition-all duration-300 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center shadow-md hover:shadow-xl">
-          <div class="lg:col-span-7 space-y-5">
+        <div id="card-immo" class="solution-card bg-white border border-slate-200/90 hover:border-violet-400 rounded-3xl p-6 sm:p-8 lg:p-10 transition-all duration-300 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center shadow-md hover:shadow-xl">
+          <div class="lg:col-span-7 space-y-6">
             <div class="flex items-center gap-3">
-              <span class="w-10 h-10 rounded-xl bg-purple-100 border border-purple-300 flex items-center justify-center text-xl">🏢</span>
-              <span class="text-xs font-mono font-bold uppercase text-purple-900 bg-purple-100/90 px-3 py-1 rounded-full border border-purple-300">Agences Immobilières &amp; Promoteurs</span>
+              <span class="w-10 h-10 rounded-xl bg-violet-100 border border-violet-300 flex items-center justify-center text-xl">🏢</span>
+              <span class="text-xs font-mono font-bold uppercase text-violet-900 bg-violet-100/90 px-3 py-1 rounded-full border border-violet-300">Agences Immobilières &amp; Promoteurs</span>
             </div>
-            <h3 class="font-display font-extrabold text-2xl sm:text-3xl text-slate-900">
-              ImmoMaster™ Suite
-            </h3>
-            <div class="bg-rose-50 border-l-4 border-rose-500 p-4 rounded-r-xl">
-              <p class="text-xs font-bold text-rose-800 uppercase tracking-wider mb-1">Le Problème Critique Résolu :</p>
-              <p class="text-sm text-slate-700 leading-relaxed">
-                Pertes des contacts acquéreurs chauds non relancés, rapprochement manuel laborieux entre nouveaux biens et acquéreurs en attente, et suivi flou des mandats négociateurs.
+            
+            <div>
+              <h3 class="font-display font-extrabold text-2xl sm:text-3xl text-slate-900">
+                ImmoMaster™ Suite
+              </h3>
+              <p class="text-slate-600 text-sm sm:text-base mt-2 leading-relaxed">
+                Multipliez vos ventes : matching automatique entre mandats et acquéreurs chauds, fiches vitrines PDF en 1 clic et suivi transparent des commissions négociateurs.
               </p>
             </div>
-            <div>
-              <p class="text-xs font-bold font-mono text-slate-500 uppercase tracking-wider mb-3">Fonctionnalités Clés Intégrées :</p>
-              <ul class="space-y-2 text-sm text-slate-700">
-                <li class="flex items-start gap-2.5"><span class="text-purple-600 font-bold mt-0.5 flex-shrink-0">✔</span> <strong>Catalogue multicritères immersif :</strong> Ancien, Neuf VEFA, Villas, Terrains avec plans et visites 3D.</li>
-                <li class="flex items-start gap-2.5"><span class="text-purple-600 font-bold mt-0.5 flex-shrink-0">✔</span> <strong>Matching automatique acquéreurs/mandats :</strong> alerte instantanée dès qu'un bien correspond à une recherche.</li>
-                <li class="flex items-start gap-2.5"><span class="text-purple-600 font-bold mt-0.5 flex-shrink-0">✔</span> <strong>Bons de visite &amp; Mandats électroniques :</strong> signature dématérialisée et registre légal des mandats.</li>
-                <li class="flex items-start gap-2.5"><span class="text-purple-600 font-bold mt-0.5 flex-shrink-0">✔</span> <strong>Générateur fiches vitrines PDF :</strong> édition A4/A3 en 1 clic et CRM de suivi des commissions négociateurs.</li>
-              </ul>
+
+            <!-- Points clés aérés et concis -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div class="flex items-center gap-2.5 text-xs sm:text-sm text-slate-800 bg-slate-50 border border-slate-200/80 p-3 rounded-xl">
+                <span class="text-violet-600 font-bold text-base flex-shrink-0">✔</span>
+                <span><strong>Matching Auto :</strong> Alertes acheteurs immédiates</span>
+              </div>
+              <div class="flex items-center gap-2.5 text-xs sm:text-sm text-slate-800 bg-slate-50 border border-slate-200/80 p-3 rounded-xl">
+                <span class="text-violet-600 font-bold text-base flex-shrink-0">✔</span>
+                <span><strong>Vitrines PDF :</strong> Affiches A4/A3 en 1 clic</span>
+              </div>
+              <div class="flex items-center gap-2.5 text-xs sm:text-sm text-slate-800 bg-slate-50 border border-slate-200/80 p-3 rounded-xl">
+                <span class="text-violet-600 font-bold text-base flex-shrink-0">✔</span>
+                <span><strong>Mandats &amp; Visites :</strong> Registre &amp; bons signés</span>
+              </div>
+              <div class="flex items-center gap-2.5 text-xs sm:text-sm text-slate-800 bg-slate-50 border border-slate-200/80 p-3 rounded-xl">
+                <span class="text-violet-600 font-bold text-base flex-shrink-0">✔</span>
+                <span><strong>Commissions :</strong> Barèmes agence &amp; agents</span>
+              </div>
             </div>
-            <div class="bg-slate-50 p-3.5 rounded-xl border border-slate-200 text-xs text-slate-600">
-              <strong class="text-slate-900">Mode de Déploiement :</strong> Synchronisation Cloud multi-agences · Application mobile négociateurs en visite · Reporting direction.
-            </div>
-            <div class="pt-2 flex flex-wrap gap-4">
-              <button onclick="openDemoModal('immo')" class="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-500 text-white font-extrabold text-sm px-6 py-3 rounded-xl transition-all shadow-md shadow-purple-600/20">
-                Tester la démo ImmoMaster en direct →
-              </button>
-              <a href="https://wa.me/212645833671?text=Bonjour%20Jobydoo%2C%20je%20souhaite%20une%20d%C3%A9mo%20d%27ImmoMaster%20Suite%20pour%20mon%20agence%20ou%20promotion." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold text-sm px-5 py-3 rounded-xl border border-slate-200 transition-all">
-                Demander un devis rapide
+
+            <div class="pt-2 flex flex-wrap items-center gap-3">
+              <a href="/logiciel-immobilier" class="inline-flex items-center gap-2 bg-violet-600 hover:bg-violet-500 text-white font-extrabold text-sm px-6 py-3.5 rounded-full transition-all shadow-md shadow-violet-600/20">
+                <span>Découvrir ImmoMaster™ (Page Dédiée)</span>
+                <span>→</span>
               </a>
+              <button onclick="openDemoModal('immo')" class="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold text-sm px-5 py-3.5 rounded-full border border-slate-200 transition-all">
+                <span>Tester la démo</span>
+              </button>
             </div>
           </div>
 
@@ -635,12 +722,12 @@
           <div class="lg:col-span-5 bg-slate-100/90 border border-slate-200 rounded-2xl p-4 space-y-3 shadow-sm">
             <div class="flex items-center justify-between pb-2 border-b border-slate-200 text-xs">
               <div class="flex gap-1.5"><span class="w-3 h-3 rounded-full bg-rose-500"></span><span class="w-3 h-3 rounded-full bg-amber-400"></span><span class="w-3 h-3 rounded-full bg-emerald-500"></span></div>
-              <span class="text-purple-800 text-[11px] font-bold font-mono">● CRM &amp; RAPPROCHEMENT IMMO</span>
+              <span class="text-violet-800 text-[11px] font-bold font-mono">● CRM &amp; RAPPROCHEMENT IMMO</span>
             </div>
 
             <!-- Image Switcher Tabs -->
             <div class="flex gap-2">
-              <button id="tab-immo-1" onclick="switchDashboardImg('immo', '/dashboards/immo-dashboard.png', 'ImmoMaster™ Suite — Portefeuille Biens & Mandats', this)" class="img-tab active flex-1 py-1.5 px-2 rounded-lg text-xs border border-slate-300 text-center transition-all bg-white font-bold text-purple-800">
+              <button id="tab-immo-1" onclick="switchDashboardImg('immo', '/dashboards/immo-dashboard.png', 'ImmoMaster™ Suite — Portefeuille Biens & Mandats', this)" class="img-tab active flex-1 py-1.5 px-2 rounded-lg text-xs border border-slate-300 text-center transition-all bg-white font-bold text-violet-800">
                 Portefeuille Biens
               </button>
               <button id="tab-immo-2" onclick="switchDashboardImg('immo', '/dashboards/immo-crm.png', 'ImmoMaster™ Suite — Pipeline & Matching Acquéreurs', this)" class="img-tab flex-1 py-1.5 px-2 rounded-lg text-xs border border-transparent text-slate-600 hover:text-slate-900 text-center transition-all">
@@ -656,7 +743,7 @@
             </div>
             <div class="grid grid-cols-3 gap-2 text-center text-xs">
               <div class="bg-white border border-slate-200/80 p-2 rounded-lg shadow-2xs"><p class="text-slate-400 text-[10px]">Biens Actifs</p><p class="text-slate-900 font-bold">89 Mandats</p></div>
-              <div class="bg-white border border-slate-200/80 p-2 rounded-lg shadow-2xs"><p class="text-slate-400 text-[10px]">Acquéreurs</p><p class="text-purple-700 font-bold">240 Fiches</p></div>
+              <div class="bg-white border border-slate-200/80 p-2 rounded-lg shadow-2xs"><p class="text-slate-400 text-[10px]">Acquéreurs</p><p class="text-violet-700 font-bold">240 Fiches</p></div>
               <div class="bg-white border border-slate-200/80 p-2 rounded-lg shadow-2xs"><p class="text-slate-400 text-[10px]">Délai Vente</p><p class="text-emerald-600 font-bold">- 35 jours</p></div>
             </div>
           </div>
