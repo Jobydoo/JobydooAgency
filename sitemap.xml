@@ -246,14 +246,62 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://www.jobydooagency.com/en/white-label-agency"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jobydooagency.com/en/white-label-agency"/>
   </url>
+  <!-- ================================================================= -->
+  <!-- ARABIC SOLUTIONS & APP PAGES                                      -->
+  <!-- ================================================================= -->
   <url>
-    <loc>https://www.jobydooagency.com/en/contact</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.jobydooagency.com/en/contact"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/contact"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jobydooagency.com/contact"/>
+    <loc>https://www.jobydooagency.com/ar/solutions-metiers</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.jobydooagency.com/ar/solutions-metiers"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/solutions-metiers"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jobydooagency.com/solutions-metiers"/>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/ar/logiciel-avocat</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.jobydooagency.com/ar/logiciel-avocat"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/logiciel-avocat"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jobydooagency.com/logiciel-avocat"/>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/ar/logiciel-dentiste</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.jobydooagency.com/ar/logiciel-dentiste"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/logiciel-dentiste"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jobydooagency.com/logiciel-dentiste"/>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/ar/logiciel-medecin</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.jobydooagency.com/ar/logiciel-medecin"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/logiciel-medecin"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jobydooagency.com/logiciel-medecin"/>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/ar/logiciel-location-voiture</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.jobydooagency.com/ar/logiciel-location-voiture"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/logiciel-location-voiture"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jobydooagency.com/logiciel-location-voiture"/>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/ar/logiciel-immobilier</loc>
+    <lastmod>2026-10-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://www.jobydooagency.com/ar/logiciel-immobilier"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/logiciel-immobilier"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jobydooagency.com/logiciel-immobilier"/>
   </url>
 
 </urlset>
