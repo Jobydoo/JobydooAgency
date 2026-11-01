@@ -186,6 +186,30 @@
   color: #10b981;
   font-weight: 700;
 }
+.agency-split {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+  align-items: center;
+}
+.agency-subsplit {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 24px 0;
+}
+@media (max-width: 900px) {
+  .agency-split {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+@media (max-width: 600px) {
+  .agency-subsplit {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
 </style>
 </head>
 <body>
@@ -253,16 +277,309 @@
   </div>
 </section>
 
-<!-- TRUST BAR -->
-<section style="padding: 24px 0; border-bottom: 1px solid var(--border); background: var(--surface);">
-  <div class="container" style="text-align: center;">
-    <p style="font-size:0.85rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em; color:var(--text-dim); margin-bottom:16px;">Trusted by High-Growth Companies &amp; Partner Agencies Across 8 Countries</p>
-    <div style="display:flex; justify-content:center; align-items:center; gap:32px; flex-wrap:wrap; opacity:0.85;">
-      <span class="trust-badge-pill">⭐ Clutch 4.9/5 Rated Agency</span>
-      <span class="trust-badge-pill">🛡️ Strict NDA &amp; IP Protection</span>
-      <span class="trust-badge-pill">🚀 Modern Stack (Next.js, Node, Laravel)</span>
-      <span class="trust-badge-pill">⚡ Core Web Vitals &lt; 1s Guaranteed</span>
-      <span class="trust-badge-pill">🇪🇺 GMT+1 Same Timezone as Europe</span>
+<!-- SOCIAL PROOF: TRUST BAR (MULTIPLE DOMAINS, REALISTIC SVG ICONS) -->
+<section class="trust-bar-section">
+  <div class="container">
+    <div class="trust-bar-label">THEY TRUST JOBYDOO AGENCY</div>
+    <div class="trust-logos-row">
+      <!-- 1. Arkeonic - Tech & SaaS -->
+      <a href="https://www.arkeonic.com" target="_blank" rel="noopener" class="trust-logo-item" title="Arkeonic — Tech & Cloud SaaS Suite">
+        <span class="trust-logo-icon" style="background:rgba(99,102,241,0.12);color:#6366f1;">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+        </span>
+        <div>
+          <div style="line-height:1.15">Arkeonic Suite</div>
+          <span class="trust-sector-label">Tech &amp; SaaS B2B</span>
+        </div>
+      </a>
+
+      <!-- 2. Sweety Vegan - E-Commerce & Retail -->
+      <a href="https://sweetyveganforall.com" target="_blank" rel="noopener" class="trust-logo-item" title="Sweety Vegan — Organic E-Commerce">
+        <span class="trust-logo-icon" style="background:rgba(16,185,129,0.12);color:#10b981;">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a9 9 0 0 1 9 9c0 4.97-4.03 9-9 9a9 9 0 0 1-9-9c0-4.97 4.03-9 9-9z"/><path d="M12 12c2.5-3 6-3 6-3s0 3.5-3 6-6 3-6 3 0-3.5 3-6z"/></svg>
+        </span>
+        <div>
+          <div style="line-height:1.15">Sweety Vegan</div>
+          <span class="trust-sector-label">E-Commerce &amp; Retail</span>
+        </div>
+      </a>
+
+      <!-- 3. Atlas Immo Prestige - Luxury Real Estate -->
+      <a href="/solutions-metiers" class="trust-logo-item" title="Atlas Immo Prestige — Luxury Real Estate Portal">
+        <span class="trust-logo-icon" style="background:rgba(245,158,11,0.12);color:#f59e0b;">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h2v2H9zM9 13h2v2H9zM9 17h2v2H9zM13 9h2v2h-2zM13 13h2v2h-2zM13 17h2v2h-2z"/></svg>
+        </span>
+        <div>
+          <div style="line-height:1.15">Atlas Immo</div>
+          <span class="trust-sector-label">Luxury Real Estate</span>
+        </div>
+      </a>
+
+      <!-- 4. DentCare Clinic - Healthcare & Medical -->
+      <a href="/solutions-metiers" class="trust-logo-item" title="DentCare Clinic — Medical & Dental Portal">
+        <span class="trust-logo-icon" style="background:rgba(14,165,233,0.12);color:#0ea5e9;">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </span>
+        <div>
+          <div style="line-height:1.15">DentCare Clinic</div>
+          <span class="trust-sector-label">Healthcare &amp; Clinic</span>
+        </div>
+      </a>
+
+      <!-- 5. Cabinet Maître Berrada - Legal & Corporate Law -->
+      <a href="/solutions-metiers" class="trust-logo-item" title="Cabinet Berrada — Business Law Firm">
+        <span class="trust-logo-icon" style="background:rgba(71,85,105,0.12);color:#475569;">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M6 8l6-3 6 3M6 8l-3 6h6L6 8zm12 0l-3 6h6l-3-6z"/></svg>
+        </span>
+        <div>
+          <div style="line-height:1.15">Cabinet Berrada</div>
+          <span class="trust-sector-label">Legal &amp; Business Law</span>
+        </div>
+      </a>
+
+      <!-- 6. AutoDrive Maroc - Fleet & Car Rental -->
+      <a href="/solutions-metiers" class="trust-logo-item" title="AutoDrive Maroc — Fleet Management & Rental">
+        <span class="trust-logo-icon" style="background:rgba(37,99,235,0.12);color:#2563eb;">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17h14M3 11l2-5h14l2 5M3 11v6h2v-2h14v2h2v-6M7 14a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm10 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/></svg>
+        </span>
+        <div>
+          <div style="line-height:1.15">AutoDrive Fleet</div>
+          <span class="trust-sector-label">Car Rental &amp; Mobility</span>
+        </div>
+      </a>
+
+      <!-- 7. Morocco Desert Trips - Travel & Expeditions -->
+      <a href="https://www.moroccodeserttrips.com" target="_blank" rel="noopener" class="trust-logo-item" title="Morocco Desert Trips — Bespoke Travel & Expeditions">
+        <span class="trust-logo-icon" style="background:rgba(217,119,6,0.12);color:#d97706;">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polygon points="12 7 15 12 12 10 9 12 12 7"/><polygon points="12 17 9 12 12 14 15 12 12 17"/></svg>
+        </span>
+        <div>
+          <div style="line-height:1.15">Morocco Desert Trips</div>
+          <span class="trust-sector-label">Travel &amp; Expeditions</span>
+        </div>
+      </a>
+
+      <!-- 8. Distinctive Experience - Luxury VIP Concierge -->
+      <a href="https://distinctiveexperience.com" target="_blank" rel="noopener" class="trust-logo-item" title="Distinctive Experience — Private Concierge & VIP Travel">
+        <span class="trust-logo-icon" style="background:rgba(147,51,234,0.12);color:#9333ea;">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 12L2 9l4-6zM2 9h20M10 3l-2 6 4 12 4-12-2-6"/></svg>
+        </span>
+        <div>
+          <div style="line-height:1.15">Distinctive Experience</div>
+          <span class="trust-sector-label">Luxury VIP Concierge</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION: KEY REALIZATIONS (CLIENT SHOWCASE WITH WEBP SCREENSHOTS) -->
+<section class="realisations-section" id="realisations">
+  <div class="container">
+    <div class="reveal text-center">
+      <span class="eyebrow" style="color:#7c3aed;">Case Studies &amp; Proven ROI</span>
+      <h2 style="font-size:clamp(1.8rem,4vw,2.6rem);font-weight:900;color:#0f172a;margin-top:6px;">
+        Featured <span class="gradient-purple-text">Client Work</span>
+      </h2>
+      <p class="lead" style="margin:0 auto;max-width:58ch;">
+        Explore live web platforms, custom CRM tools, and scalable software built for high-growth businesses in the UK, Europe, North America, and Morocco.
+      </p>
+    </div>
+
+    <div class="realisations-grid reveal">
+      <!-- 1. Morocco Desert Trips - Travel -->
+      <a href="https://www.moroccodeserttrips.com" target="_blank" rel="noopener" class="realisation-card">
+        <div class="realisation-visual">
+          <div class="realisation-browser-bar">
+            <span class="browser-dot dot-red"></span>
+            <span class="browser-dot dot-yellow"></span>
+            <span class="browser-dot dot-green"></span>
+            <span class="browser-url">moroccodeserttrips.com</span>
+          </div>
+          <img src="/assets/img/projects/project-mdt.webp" alt="Morocco Desert Trips - Travel Web Platform & Booking Engine" class="realisation-img" width="600" height="360" loading="lazy">
+          <div class="realisation-overlay"></div>
+          <div class="realisation-badge"><span class="badge-dot" style="background:#f59e0b;"></span> +140% direct bookings</div>
+          <div class="realisation-logo-text">Morocco Desert Trips</div>
+        </div>
+        <div class="realisation-info">
+          <div>
+            <span class="realisation-tag">Tourism &amp; Direct Booking Engine</span>
+            <h4 class="realisation-title">Morocco Desert Trips</h4>
+          </div>
+          <div class="realisation-btn">→</div>
+        </div>
+      </a>
+
+      <!-- 2. Arkeonic - SaaS & Tech -->
+      <a href="https://www.arkeonic.com" target="_blank" rel="noopener" class="realisation-card">
+        <div class="realisation-visual">
+          <div class="realisation-browser-bar">
+            <span class="browser-dot dot-red"></span>
+            <span class="browser-dot dot-yellow"></span>
+            <span class="browser-dot dot-green"></span>
+            <span class="browser-url">app.arkeonic.com</span>
+          </div>
+          <img src="/assets/img/projects/project-arkeonic.webp" alt="Arkeonic Suite - SaaS CRM & Workflow Automation" class="realisation-img" width="600" height="360" loading="lazy">
+          <div class="realisation-overlay"></div>
+          <div class="realisation-badge"><span class="badge-dot" style="background:#6366f1;"></span> 98/100 Speed Score</div>
+          <div class="realisation-logo-text">Arkeonic Suite</div>
+        </div>
+        <div class="realisation-info">
+          <div>
+            <span class="realisation-tag">Cloud Web App &amp; Custom CRM</span>
+            <h4 class="realisation-title">Arkeonic</h4>
+          </div>
+          <div class="realisation-btn">→</div>
+        </div>
+      </a>
+
+      <!-- 3. Sweety Vegan - E-Commerce -->
+      <a href="https://sweetyveganforall.com" target="_blank" rel="noopener" class="realisation-card">
+        <div class="realisation-visual">
+          <div class="realisation-browser-bar">
+            <span class="browser-dot dot-red"></span>
+            <span class="browser-dot dot-yellow"></span>
+            <span class="browser-dot dot-green"></span>
+            <span class="browser-url">sweetyveganforall.com</span>
+          </div>
+          <img src="/assets/img/projects/project-sweetyvegan.webp" alt="Sweety Vegan - E-Commerce Organic Store" class="realisation-img" width="600" height="360" loading="lazy">
+          <div class="realisation-overlay"></div>
+          <div class="realisation-badge"><span class="badge-dot" style="background:#10b981;"></span> +185% online sales</div>
+          <div class="realisation-logo-text">Sweety Vegan</div>
+        </div>
+        <div class="realisation-info">
+          <div>
+            <span class="realisation-tag">E-Commerce &amp; Organic Retail</span>
+            <h4 class="realisation-title">Sweety Vegan</h4>
+          </div>
+          <div class="realisation-btn">→</div>
+        </div>
+      </a>
+
+      <!-- 4. Atlas Immo Prestige - Real Estate -->
+      <a href="/solutions-metiers" class="realisation-card">
+        <div class="realisation-visual">
+          <div class="realisation-browser-bar">
+            <span class="browser-dot dot-red"></span>
+            <span class="browser-dot dot-yellow"></span>
+            <span class="browser-dot dot-green"></span>
+            <span class="browser-url">atlas-immo-prestige.ma</span>
+          </div>
+          <img src="/assets/img/projects/project-immo.webp" alt="Atlas Immo Prestige - Luxury Real Estate Portal" class="realisation-img" width="600" height="360" loading="lazy">
+          <div class="realisation-overlay"></div>
+          <div class="realisation-badge"><span class="badge-dot" style="background:#f59e0b;"></span> +240% qualified leads</div>
+          <div class="realisation-logo-text">Atlas Immo Prestige</div>
+        </div>
+        <div class="realisation-info">
+          <div>
+            <span class="realisation-tag">Luxury Real Estate &amp; Property CRM</span>
+            <h4 class="realisation-title">Atlas Immo Prestige</h4>
+          </div>
+          <div class="realisation-btn">→</div>
+        </div>
+      </a>
+
+      <!-- 5. DentCare Clinic - Healthcare -->
+      <a href="/solutions-metiers" class="realisation-card">
+        <div class="realisation-visual">
+          <div class="realisation-browser-bar">
+            <span class="browser-dot dot-red"></span>
+            <span class="browser-dot dot-yellow"></span>
+            <span class="browser-dot dot-green"></span>
+            <span class="browser-url">dentcare-clinic.ma</span>
+          </div>
+          <img src="/assets/img/projects/project-medical.webp" alt="DentCare Clinic - Medical Healthcare Portal & Booking" class="realisation-img" width="600" height="360" loading="lazy">
+          <div class="realisation-overlay"></div>
+          <div class="realisation-badge"><span class="badge-dot" style="background:#0ea5e9;"></span> +310% online bookings</div>
+          <div class="realisation-logo-text">DentCare Clinic</div>
+        </div>
+        <div class="realisation-info">
+          <div>
+            <span class="realisation-tag">Healthcare &amp; Online Booking</span>
+            <h4 class="realisation-title">DentCare Clinic</h4>
+          </div>
+          <div class="realisation-btn">→</div>
+        </div>
+      </a>
+
+      <!-- 6. Distinctive Experience - Luxury VIP -->
+      <a href="https://distinctiveexperience.com" target="_blank" rel="noopener" class="realisation-card">
+        <div class="realisation-visual">
+          <div class="realisation-browser-bar">
+            <span class="browser-dot dot-red"></span>
+            <span class="browser-dot dot-yellow"></span>
+            <span class="browser-dot dot-green"></span>
+            <span class="browser-url">distinctiveexperience.com</span>
+          </div>
+          <img src="/assets/img/projects/project-distinctive.webp" alt="Distinctive Experience - VIP Concierge & Luxury Expeditions" class="realisation-img" width="600" height="360" loading="lazy">
+          <div class="realisation-overlay"></div>
+          <div class="realisation-badge"><span class="badge-dot" style="background:#9333ea;"></span> #1 VIP Concierge</div>
+          <div class="realisation-logo-text">Distinctive Experience</div>
+        </div>
+        <div class="realisation-info">
+          <div>
+            <span class="realisation-tag">Luxury Concierge &amp; VIP Travel</span>
+            <h4 class="realisation-title">Distinctive Experience</h4>
+          </div>
+          <div class="realisation-btn">→</div>
+        </div>
+      </a>
+    </div>
+
+    <div style="text-align:center;margin-top:36px;">
+      <a href="/portfolio" class="btn btn--outline" style="border-radius:30px;padding:12px 28px;font-weight:700;">
+        Explore All +34 Live Client Projects →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION: 360° IMPACT METHOD (ROTATING WHEEL) -->
+<section class="methode-360-section" id="methode-360">
+  <div class="container text-center">
+    <div class="reveal">
+      <span class="eyebrow" style="color:#7c3aed;">Predictable Engineering &amp; Growth</span>
+      <h2 style="font-size:clamp(1.8rem,4vw,2.6rem);font-weight:900;color:#0f172a;margin-top:6px;">
+        The <span class="gradient-purple-text">360° IMPACT</span> Method
+      </h2>
+      <p class="lead" style="margin:0 auto;max-width:58ch;">
+        Our proprietary 6-stage engineering and acquisition framework ensuring timely delivery, strict quality control, and tangible business ROI.
+      </p>
+    </div>
+
+    <!-- 360 ROTATING WHEEL VIEWPORT -->
+    <div class="wheel-360-viewport reveal">
+      <div class="wheel-apex-tag" id="wheelApexTagEn">STAGE</div>
+
+      <div class="wheel-360-disc" id="wheelDiscEn">
+        <div class="wheel-360-inner-glow"></div>
+        <button class="wheel-node" data-step="0" aria-label="Stage I: Investigation"><span class="wheel-node-letter">I</span></button>
+        <button class="wheel-node" data-step="1" aria-label="Stage M: Modeling"><span class="wheel-node-letter">M</span></button>
+        <button class="wheel-node" data-step="2" aria-label="Stage P: Production"><span class="wheel-node-letter">P</span></button>
+        <button class="wheel-node active" data-step="3" aria-label="Stage A: Action"><span class="wheel-node-letter">A</span></button>
+        <button class="wheel-node" data-step="4" aria-label="Stage C: Conversion"><span class="wheel-node-letter">C</span></button>
+        <button class="wheel-node" data-step="5" aria-label="Stage T: Tracking"><span class="wheel-node-letter">T</span></button>
+      </div>
+
+      <button class="wheel-nav-arrow wheel-arrow-prev" id="wheelPrevBtnEn" aria-label="Previous step">‹</button>
+      <button class="wheel-nav-arrow wheel-arrow-next" id="wheelNextBtnEn" aria-label="Next step">›</button>
+
+      <div class="wheel-detail-card" id="wheelDetailCardEn">
+        <h3 class="wheel-step-title" id="wheelTitleEn">
+          Action <span class="dim">&amp; Sprint Execution</span>
+        </h3>
+        <p class="wheel-step-desc" id="wheelDescEn">
+          Agile 2-week sprints with dedicated senior full-stack developers. Continuous code deployment, clean documentation, and direct Slack communication.
+        </p>
+        <div class="wheel-deliverables-wrap" id="wheelDeliverablesEn">
+          <span>AGILE DEV SPRINTS</span> <span class="wheel-deliverables-bullet">•</span> <span>CLEAN ARCHITECTURE</span> <span class="wheel-deliverables-bullet">•</span> <span>API INTEGRATIONS</span> <span class="wheel-deliverables-bullet">•</span> <span>RIGOROUS QA</span>
+        </div>
+        <div>
+          <a href="/en/contact" class="impact-cta-btn">
+            <span>Schedule Discovery Call</span> <span class="arr">→</span>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -319,12 +636,12 @@
 <!-- WHITE LABEL CALLOUT -->
 <section class="section" style="background: var(--surface-2); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
   <div class="container">
-    <div style="display:grid; grid-template-columns: 1.2fr 0.8fr; gap:40px; align-items:center;">
+    <div class="agency-split">
       <div class="reveal">
         <span class="eyebrow" style="color:var(--primary);">For Digital Agencies (US, UK, Europe)</span>
         <h2>Overwhelmed with Client Dev Work? Partner With Our Nearshore Team Under NDA.</h2>
         <p style="color:var(--text-dim); line-height:1.7; margin:16px 0;">We act as the silent engineering engine behind top design and marketing agencies in London, Paris, and New York. Scale your agency's output without the overhead and legal risks of local hiring.</p>
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:24px 0;">
+        <div class="agency-subsplit">
           <div style="background:var(--surface); padding:16px; border-radius:8px; border:1px solid var(--border);">
             <strong>🔒 100% White-Label</strong>
             <p style="font-size:0.85rem; color:var(--text-dim); margin-top:4px;">We work in your Slack, ClickUp, Jira, or GitHub. Your clients never see our name.</p>
@@ -475,41 +792,292 @@
 <footer class="footer">
   <div class="container">
     <div class="footer-grid">
+      <!-- Col 1: Brand & Identity -->
       <div>
-        <div class="brand"><img src="/assets/img/logo.svg" alt="Jobydoo Agency" class="brand-logo-img" width="34" height="34"><span class="brand-name">Jobydoo<span class="brand-dot">.</span></span></div>
-        <p style="color:var(--text-dim);max-width:34ch;line-height:1.65">Elite nearshore digital agency. High-performance web development, custom CRM engineering, and performance marketing in GMT+1.</p>
-        <div class="socials" style="margin-top:12px">
+        <a class="brand" href="/en" title="Jobydoo Agency — Nearshore Digital Agency"><img src="/assets/img/logo.svg" alt="Jobydoo Agency" class="brand-logo-img" width="34" height="34"><span class="brand-name" style="color:#ffffff">Jobydoo<span class="brand-dot">.</span></span></a>
+        <p style="color:var(--text-dim);max-width:34ch;line-height:1.65;margin:12px 0 16px;">Elite nearshore digital agency. High-performance web development, custom CRM engineering, and performance marketing in GMT+1.</p>
+        <div class="socials">
           <a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="Instagram">ig</a><a href="#" aria-label="Facebook">fb</a>
         </div>
       </div>
+
+      <!-- Col 2: Core Services -->
       <div>
-        <h5>Services</h5>
-        <a href="/en/web-development">Nearshore Web Dev</a>
-        <a href="/en/custom-crm">Custom CRM &amp; ERP</a>
-        <a href="/en/media-buying">Performance Media Buying</a>
-        <a href="/en/white-label-agency">White-Label for Agencies</a>
+        <h5>Core Expertise</h5>
+        <a href="/en" title="Jobydoo Agency English Home">Home (English)</a>
+        <a href="/en/web-development" title="Nearshore Web Development">Nearshore Web Dev</a>
+        <a href="/en/custom-crm" title="Custom CRM & ERP Software">Custom CRM &amp; ERP</a>
+        <a href="/en/media-buying" title="High-ROAS Paid Media Buying">Performance Media Buying</a>
+        <a href="/en/white-label-agency" title="White-Label Subcontracting for Agencies">White-Label for Agencies</a>
+        <a href="/portfolio" title="Live Client Portfolio">Client Portfolio (+34)</a>
       </div>
+
+      <!-- Col 3: Business Vertical Software -->
       <div>
-        <h5>Company</h5>
-        <a href="/blog">Blog &amp; Insights</a>
-        <a href="/en/white-label-agency">Agency Partnership</a>
-        <a href="/en/contact">Schedule Discovery Call</a>
-        <a href="/">French Version (FR)</a>
+        <h5>Specialized Software ⚡</h5>
+        <a href="/solutions-metiers" style="color:#f59e0b;font-weight:700;">Business Suites (48h)</a>
+        <a href="/logiciel-avocat" title="Legal & Law Firm Practice Software">Law &amp; Notary Suite</a>
+        <a href="/logiciel-dentiste" title="Dental Clinic & Orthodontics System">Dental Clinic System</a>
+        <a href="/logiciel-medecin" title="Medical Practice & Clinic Portal">Medical Clinic Portal</a>
+        <a href="/logiciel-location-voiture" title="Car Rental Fleet Management">Fleet &amp; Car Rental</a>
+        <a href="/logiciel-immobilier" title="Real Estate & Brokerage CRM">Real Estate Agency CRM</a>
       </div>
+
+      <!-- Col 4: Strategic Insights & SEO -->
       <div>
-        <h5>International Inquiries</h5>
-        <a href="mailto:contact@jobydooagency.com">contact@jobydooagency.com</a>
-        <a href="tel:+212645833671">+212 645 833 671</a>
-        <a href="https://wa.me/212645833671" target="_blank" rel="noopener">WhatsApp Direct Chat</a>
+        <h5>Insights &amp; Guides</h5>
+        <a href="/blog" title="Tech Blog & Engineering Insights">Engineering Blog</a>
+        <a href="/blog/agence-web-casablanca.html">Web Agency Casablanca</a>
+        <a href="/blog/creation-site-web-marrakech.html">Web Development Marrakech</a>
+        <a href="/blog/agence-seo-casablanca.html">SEO Agency Morocco</a>
+        <a href="/blog/creation-site-web-maroc-guide.html">Morocco Web Guide 2026</a>
+        <a href="/" title="Passer au site en Français">French Version (FR)</a>
+      </div>
+
+      <!-- Col 5: Contact & Booking -->
+      <div>
+        <h5>Discovery &amp; Calls</h5>
+        <a href="/en/contact" title="Schedule 15-Minute Discovery Call">Schedule Discovery Call</a>
+        <a href="/a-propos" title="About Jobydoo Agency">About the Agency</a>
+        <a href="/pricing" title="Transparent Pricing & Retainers">Pricing &amp; Retainers</a>
+        <div style="margin-top:14px;padding-top:12px;border-top:1px solid #1e293b;">
+          <a href="mailto:contact@jobydooagency.com" style="font-size:0.8rem;color:#f59e0b;">contact@jobydooagency.com</a>
+          <a href="tel:+212645833671" style="font-size:0.8rem;">+212 645 833 671</a>
+          <a href="https://wa.me/212645833671" target="_blank" rel="noopener" style="font-size:0.8rem;color:#10b981;">WhatsApp Chat Direct</a>
+        </div>
       </div>
     </div>
+
     <div class="footer-bottom">
-      <span>© 2026 Jobydoo Agency. All rights reserved.</span>
-      <span>Nearshore Web Development · Tailored CRM · Media Buying (GMT+1)</span>
+      <span>© 2026 Jobydoo Agency. All rights reserved. · Nearshore Web Development · Tailored CRM · Media Buying (GMT+1)</span>
+      <span><a href="/en" style="color:inherit;text-decoration:underline;">Home</a> · <a href="/" style="color:inherit;text-decoration:underline;">Version Française</a> · <a href="/portfolio" style="color:inherit;text-decoration:underline;">Portfolio</a> · <a href="/en/contact" style="color:inherit;text-decoration:underline;">Contact</a></span>
     </div>
   </div>
 </footer>
 
 <script src="../assets/js/main.js?v=20261011b"></script>
+<script>
+  // 360° IMPACT METHOD: Continuous Automated Rotation Script (EN Version)
+  (function() {
+    const stepsData = [
+      {
+        letter: 'I',
+        name: 'Investigation & Strategic Audit',
+        title: 'Investigation <span class="dim">&amp; Technical Audit</span>',
+        desc: 'Deep audit of your codebase, technical architecture, tracking infrastructure, and conversion funnels to identify high-leverage growth opportunities.',
+        deliverables: '<span>TECH STACK AUDIT</span> <span class="wheel-deliverables-bullet">•</span> <span>SECURITY &amp; COMPLIANCE</span> <span class="wheel-deliverables-bullet">•</span> <span>OPPORTUNITY ROADMAP</span>',
+        angle: -75
+      },
+      {
+        letter: 'M',
+        name: 'Modeling & Architecture',
+        title: 'Modeling <span class="dim">&amp; Sprint Planning</span>',
+        desc: 'Translating business logic into database schemas, high-fidelity UI/UX design prototypes, API architecture, and rigorous 2-week sprint deliverables.',
+        deliverables: '<span>SYSTEM ARCHITECTURE</span> <span class="wheel-deliverables-bullet">•</span> <span>FIGMA PROTOTYPES</span> <span class="wheel-deliverables-bullet">•</span> <span>SPRINT BACKLOG</span>',
+        angle: -45
+      },
+      {
+        letter: 'P',
+        name: 'Production & UX Engineering',
+        title: 'Production <span class="dim">&amp; UX Prototyping</span>',
+        desc: 'Clean modular code, headless frontend engineering, custom API endpoints, and seamless responsive performance across all modern viewports.',
+        deliverables: '<span>BESPOKE CODING</span> <span class="wheel-deliverables-bullet">•</span> <span>MOBILE-FIRST UX</span> <span class="wheel-deliverables-bullet">•</span> <span>DATABASE SETUP</span>',
+        angle: -15
+      },
+      {
+        letter: 'A',
+        name: 'Action & Sprint Execution',
+        title: 'Action <span class="dim">&amp; Sprint Execution</span>',
+        desc: 'Agile 2-week sprints with dedicated senior full-stack developers. Continuous code deployment, clean documentation, and direct Slack communication.',
+        deliverables: '<span>AGILE DEV SPRINTS</span> <span class="wheel-deliverables-bullet">•</span> <span>CLEAN ARCHITECTURE</span> <span class="wheel-deliverables-bullet">•</span> <span>API INTEGRATIONS</span> <span class="wheel-deliverables-bullet">•</span> <span>RIGOROUS QA</span>',
+        angle: 15
+      },
+      {
+        letter: 'C',
+        name: 'Conversion Optimization',
+        title: 'Conversion <span class="dim">&amp; Funnel Optimization</span>',
+        desc: 'A/B testing, checkout friction reduction, Core Web Vitals speed optimization, and high-converting paid media acquisition.',
+        deliverables: '<span>SUB-SECOND LOADING</span> <span class="wheel-deliverables-bullet">•</span> <span>CAPI SERVER TRACKING</span> <span class="wheel-deliverables-bullet">•</span> <span>CHECKOUT AUDIT</span>',
+        angle: 45
+      },
+      {
+        letter: 'T',
+        name: 'Tracking & CRM Automation',
+        title: 'Tracking <span class="dim">&amp; CRM Automation</span>',
+        desc: 'Custom CRM pipeline setup, automated webhook synchronization, WhatsApp business bots, and executive KPI reporting dashboards.',
+        deliverables: '<span>PIPELINE AUTOMATION</span> <span class="wheel-deliverables-bullet">•</span> <span>CRM WORKFLOWS</span> <span class="wheel-deliverables-bullet">•</span> <span>REAL-TIME KPI METRICS</span>',
+        angle: 75
+      }
+    ];
+
+    const wheelDisc = document.getElementById('wheelDiscEn');
+    const nodes = wheelDisc ? wheelDisc.querySelectorAll('.wheel-node') : [];
+    const titleEl = document.getElementById('wheelTitleEn');
+    const descEl = document.getElementById('wheelDescEn');
+    const deliverablesEl = document.getElementById('wheelDeliverablesEn');
+    const detailCard = document.getElementById('wheelDetailCardEn');
+    const prevBtn = document.getElementById('wheelPrevBtnEn');
+    const nextBtn = document.getElementById('wheelNextBtnEn');
+    const viewport = document.querySelector('.methode-360-section .wheel-360-viewport');
+
+    if (!wheelDisc || !nodes.length) return;
+
+    let currentIdx = 3;
+    let autoPlayTimer = null;
+    let resumeTimer = null;
+
+    function getDiscRadius() {
+      return wheelDisc.offsetWidth / 2;
+    }
+
+    function rotateToStep(idx, instant) {
+      if (idx < 0) idx = stepsData.length - 1;
+      if (idx >= stepsData.length) idx = 0;
+      currentIdx = idx;
+
+      const targetAngle = stepsData[idx].angle;
+      const discRot = -targetAngle;
+      const radius = getDiscRadius();
+
+      if (instant) {
+        wheelDisc.style.transition = 'none';
+      } else {
+        wheelDisc.style.transition = 'transform 0.85s cubic-bezier(0.22, 1, 0.36, 1)';
+      }
+      wheelDisc.style.transform = 'rotate(' + discRot + 'deg)';
+
+      nodes.forEach((node, i) => {
+        const nodeAngle = stepsData[i].angle;
+        node.classList.toggle('active', i === idx);
+        node.style.transform = 'rotate(' + nodeAngle + 'deg) translateY(-' + radius + 'px)';
+
+        const letter = node.querySelector('.wheel-node-letter');
+        if (letter) {
+          if (instant) {
+            letter.style.transition = 'none';
+          } else {
+            letter.style.transition = 'color 0.3s ease, font-size 0.3s ease, transform 0.85s cubic-bezier(0.22, 1, 0.36, 1)';
+          }
+          letter.style.transform = 'rotate(' + (-nodeAngle - discRot) + 'deg)';
+        }
+      });
+
+      if (detailCard) {
+        detailCard.style.opacity = '0.35';
+        detailCard.style.transform = 'translateX(-50%) translateY(8px)';
+        setTimeout(() => {
+          const step = stepsData[idx];
+          if (titleEl) titleEl.innerHTML = step.title;
+          if (descEl) descEl.textContent = step.desc;
+          if (deliverablesEl) deliverablesEl.innerHTML = step.deliverables;
+          detailCard.style.opacity = '1';
+          detailCard.style.transform = 'translateX(-50%) translateY(0)';
+        }, 180);
+      }
+    }
+
+    nodes.forEach((node) => {
+      node.addEventListener('click', function(e) {
+        e.preventDefault();
+        const stepIdx = parseInt(this.getAttribute('data-step'), 10);
+        rotateToStep(stepIdx, false);
+        pauseThenResume(3500);
+      });
+    });
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        rotateToStep(currentIdx - 1, false);
+        pauseThenResume(3500);
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        rotateToStep(currentIdx + 1, false);
+        pauseThenResume(3500);
+      });
+    }
+
+    const AUTOPLAY_INTERVAL = 3800;
+
+    function startAutoPlay() {
+      if (autoPlayTimer) clearInterval(autoPlayTimer);
+      autoPlayTimer = setInterval(function() {
+        rotateToStep((currentIdx + 1) % stepsData.length, false);
+      }, AUTOPLAY_INTERVAL);
+    }
+
+    function stopAutoPlay() {
+      if (autoPlayTimer) {
+        clearInterval(autoPlayTimer);
+        autoPlayTimer = null;
+      }
+      if (resumeTimer) {
+        clearTimeout(resumeTimer);
+        resumeTimer = null;
+      }
+    }
+
+    function pauseThenResume(delayMs) {
+      stopAutoPlay();
+      resumeTimer = setTimeout(function() {
+        startAutoPlay();
+      }, delayMs || 2800);
+    }
+
+    if (viewport) {
+      viewport.addEventListener('mouseenter', function() {
+        pauseThenResume(3000);
+      });
+      viewport.addEventListener('mousemove', function() {
+        pauseThenResume(3000);
+      });
+      viewport.addEventListener('mouseleave', function() {
+        if (resumeTimer) clearTimeout(resumeTimer);
+        startAutoPlay();
+      });
+      viewport.addEventListener('touchstart', function() {
+        pauseThenResume(3000);
+      }, { passive: true });
+      viewport.addEventListener('touchend', function() {
+        pauseThenResume(2200);
+      }, { passive: true });
+      viewport.addEventListener('touchcancel', function() {
+        pauseThenResume(2200);
+      }, { passive: true });
+    }
+
+    document.addEventListener('visibilitychange', function() {
+      if (document.hidden) {
+        stopAutoPlay();
+      } else {
+        startAutoPlay();
+      }
+    });
+
+    if ('IntersectionObserver' in window && viewport) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            startAutoPlay();
+          } else {
+            stopAutoPlay();
+          }
+        });
+      }, { threshold: 0.05 });
+      observer.observe(viewport);
+    }
+
+    window.addEventListener('resize', function() {
+      rotateToStep(currentIdx, true);
+    });
+
+    rotateToStep(currentIdx, true);
+    startAutoPlay();
+  })();
+</script>
 </body>
 </html>
