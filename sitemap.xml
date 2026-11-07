@@ -1,307 +1,370 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
-
-  <!-- ================================================================= -->
-  <!-- FRENCH CORE PAGES                                                 -->
-  <!-- ================================================================= -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.jobydooagency.com/</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.jobydooagency.com/en"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jobydooagency.com/"/>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.00</priority>
   </url>
   <url>
     <loc>https://www.jobydooagency.com/creation-site-web</loc>
-    <lastmod>2026-10-10</lastmod>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/creation-site-web"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.jobydooagency.com/en/web-development"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jobydooagency.com/creation-site-web"/>
+    <priority>0.95</priority>
   </url>
   <url>
     <loc>https://www.jobydooagency.com/media-buying</loc>
-    <lastmod>2026-10-10</lastmod>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/media-buying"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.jobydooagency.com/en/media-buying"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jobydooagency.com/media-buying"/>
+    <priority>0.95</priority>
   </url>
   <url>
     <loc>https://www.jobydooagency.com/creation-crm</loc>
-    <lastmod>2026-10-10</lastmod>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/creation-crm"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.jobydooagency.com/en/custom-crm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jobydooagency.com/creation-crm"/>
-  </url>
-  <url>
-    <loc>https://www.jobydooagency.com/solutions-metiers</loc>
-    <lastmod>2026-10-18</lastmod>
-    <changefreq>daily</changefreq>
     <priority>0.95</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/solutions-metiers"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jobydooagency.com/solutions-metiers"/>
-  </url>
-  <url>
-    <loc>https://www.jobydooagency.com/logiciels-sur-mesure</loc>
-    <lastmod>2026-10-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.95</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/logiciels-sur-mesure"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jobydooagency.com/logiciels-sur-mesure"/>
-  </url>
-  <url>
-    <loc>https://www.jobydooagency.com/logiciel-avocat</loc>
-    <lastmod>2026-10-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/logiciel-avocat"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jobydooagency.com/logiciel-avocat"/>
-  </url>
-  <url>
-    <loc>https://www.jobydooagency.com/logiciel-dentiste</loc>
-    <lastmod>2026-10-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/logiciel-dentiste"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jobydooagency.com/logiciel-dentiste"/>
-  </url>
-  <url>
-    <loc>https://www.jobydooagency.com/logiciel-medecin</loc>
-    <lastmod>2026-10-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/logiciel-medecin"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jobydooagency.com/logiciel-medecin"/>
-  </url>
-  <url>
-    <loc>https://www.jobydooagency.com/logiciel-location-voiture</loc>
-    <lastmod>2026-10-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/logiciel-location-voiture"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jobydooagency.com/logiciel-location-voiture"/>
-  </url>
-  <url>
-    <loc>https://www.jobydooagency.com/logiciel-immobilier</loc>
-    <lastmod>2026-10-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/logiciel-immobilier"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jobydooagency.com/logiciel-immobilier"/>
-  </url>
-  <url>
-    <loc>https://www.jobydooagency.com/applications-general</loc>
-    <lastmod>2026-10-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/applications-general"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.jobydooagency.com/en/custom-crm"/>
-  </url>
-  <url>
-    <loc>https://www.jobydooagency.com/agence-communication</loc>
-    <lastmod>2026-10-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/agence-communication"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jobydooagency.com/agence-communication"/>
   </url>
   <url>
     <loc>https://www.jobydooagency.com/pricing</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/pricing"/>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
   </url>
   <url>
     <loc>https://www.jobydooagency.com/portfolio</loc>
-    <lastmod>2026-09-20</lastmod>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/portfolio"/>
+    <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://www.jobydooagency.com/a-propos</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/a-propos"/>
+    <loc>https://www.jobydooagency.com/solutions-metiers</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://www.jobydooagency.com/faqs</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/faqs"/>
+    <loc>https://www.jobydooagency.com/logiciels-sur-mesure</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/applications-general</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/agence-communication</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.jobydooagency.com/contact</loc>
-    <lastmod>2026-09-20</lastmod>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/contact"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.jobydooagency.com/en/contact"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jobydooagency.com/contact"/>
+    <priority>0.85</priority>
   </url>
-
-  <!-- ================================================================= -->
-  <!-- BLOG & PILLAR ARTICLES                                            -->
-  <!-- ================================================================= -->
+  <url>
+    <loc>https://www.jobydooagency.com/a-propos</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/faqs</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/crm-sur-mesure</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/crm-pme</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/crm-immobilier</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/crm-ecoles-privees</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/logiciel-location-voiture</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/logiciel-avocat</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/logiciel-dentiste</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/logiciel-medecin</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/logiciel-immobilier</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/en</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/en/web-development</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/en/white-label-agency</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/en/custom-crm</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/en/media-buying</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/en/contact</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/ar/solutions-metiers</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/ar/logiciel-location-voiture</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/ar/logiciel-avocat</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/ar/logiciel-dentiste</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/ar/logiciel-medecin</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/ar/logiciel-immobilier</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+  </url>
   <url>
     <loc>https://www.jobydooagency.com/blog</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/blog"/>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://www.jobydooagency.com/blog/creation-site-web-maroc-guide</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://www.jobydooagency.com/blog/agence-web-casablanca</loc>
-    <lastmod>2026-10-10</lastmod>
+    <loc>https://www.jobydooagency.com/blog/media-buyer-maroc</loc>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.jobydooagency.com/blog/agence-marketing-digital-maroc</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://www.jobydooagency.com/blog/creation-site-web-rabat</loc>
-    <lastmod>2026-10-10</lastmod>
+    <loc>https://www.jobydooagency.com/blog/agence-media-buying-maroc</loc>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.jobydooagency.com/blog/creation-site-web-marrakech</loc>
-    <lastmod>2026-10-10</lastmod>
+    <loc>https://www.jobydooagency.com/blog/consultant-seo-casablanca</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/blog/nearshore-web-development-morocco</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/blog/white-label-web-development-agency</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/blog/crm-maroc-sur-mesure</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/blog/outil-metier-sur-mesure-maroc</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/blog/creation-site-web-riad-hotel-marrakech</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/blog/agence-communication-rabat</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/blog/logiciel-gestion-location-voiture-maroc</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/blog/agence-ecommerce-maroc</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/blog/gestion-campagnes-ads-maroc</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/blog/prix-creation-site-web-maroc</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/blog/agence-referencement-naturel-casablanca</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/blog/crm-immobilier-maroc</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/blog/developpement-web-sur-mesure-maroc</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/blog/marketing-digital-b2b-maroc</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/blog/logiciel-cabinet-medical-maroc</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/blog/nearshore-web-agency-vs-offshore</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.jobydooagency.com/blog/crm-ecoles-privees-maroc</loc>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://www.jobydooagency.com/blog/agence-seo-casablanca</loc>
-    <lastmod>2026-10-10</lastmod>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.85</priority>
   </url>
-
-  <!-- ================================================================= -->
-  <!-- ENGLISH INTERNATIONAL ARCHITECTURE (/en/)                         -->
-  <!-- ================================================================= -->
   <url>
-    <loc>https://www.jobydooagency.com/en</loc>
-    <lastmod>2026-09-20</lastmod>
+    <loc>https://www.jobydooagency.com/blog/agence-web-casablanca</loc>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.jobydooagency.com/en"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jobydooagency.com/"/>
+    <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.jobydooagency.com/en/web-development</loc>
-    <lastmod>2026-10-10</lastmod>
+    <loc>https://www.jobydooagency.com/blog/creation-site-web-maroc-guide</loc>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.jobydooagency.com/en/web-development"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/creation-site-web"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jobydooagency.com/creation-site-web"/>
+    <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.jobydooagency.com/en/media-buying</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.jobydooagency.com/en/media-buying"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/media-buying"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jobydooagency.com/media-buying"/>
-  </url>
-  <url>
-    <loc>https://www.jobydooagency.com/en/custom-crm</loc>
-    <lastmod>2026-09-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.jobydooagency.com/en/custom-crm"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/creation-crm"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jobydooagency.com/creation-crm"/>
-  </url>
-  <url>
-    <loc>https://www.jobydooagency.com/en/white-label-agency</loc>
-    <lastmod>2026-10-10</lastmod>
+    <loc>https://www.jobydooagency.com/blog/creation-site-web-marrakech</loc>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.jobydooagency.com/en/white-label-agency"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jobydooagency.com/en/white-label-agency"/>
-  </url>
-  <!-- ================================================================= -->
-  <!-- ARABIC SOLUTIONS & APP PAGES                                      -->
-  <!-- ================================================================= -->
-  <url>
-    <loc>https://www.jobydooagency.com/ar/solutions-metiers</loc>
-    <lastmod>2026-10-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://www.jobydooagency.com/ar/solutions-metiers"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/solutions-metiers"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jobydooagency.com/solutions-metiers"/>
+    <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://www.jobydooagency.com/ar/logiciel-avocat</loc>
-    <lastmod>2026-10-18</lastmod>
+    <loc>https://www.jobydooagency.com/blog/creation-site-web-rabat</loc>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://www.jobydooagency.com/ar/logiciel-avocat"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/logiciel-avocat"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jobydooagency.com/logiciel-avocat"/>
+    <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://www.jobydooagency.com/ar/logiciel-dentiste</loc>
-    <lastmod>2026-10-18</lastmod>
+    <loc>https://www.jobydooagency.com/blog/agence-marketing-digital-maroc</loc>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://www.jobydooagency.com/ar/logiciel-dentiste"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/logiciel-dentiste"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jobydooagency.com/logiciel-dentiste"/>
+    <priority>0.80</priority>
   </url>
-  <url>
-    <loc>https://www.jobydooagency.com/ar/logiciel-medecin</loc>
-    <lastmod>2026-10-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://www.jobydooagency.com/ar/logiciel-medecin"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/logiciel-medecin"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jobydooagency.com/logiciel-medecin"/>
-  </url>
-  <url>
-    <loc>https://www.jobydooagency.com/ar/logiciel-location-voiture</loc>
-    <lastmod>2026-10-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://www.jobydooagency.com/ar/logiciel-location-voiture"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/logiciel-location-voiture"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jobydooagency.com/logiciel-location-voiture"/>
-  </url>
-  <url>
-    <loc>https://www.jobydooagency.com/ar/logiciel-immobilier</loc>
-    <lastmod>2026-10-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="ar" href="https://www.jobydooagency.com/ar/logiciel-immobilier"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.jobydooagency.com/logiciel-immobilier"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jobydooagency.com/logiciel-immobilier"/>
-  </url>
-
 </urlset>
