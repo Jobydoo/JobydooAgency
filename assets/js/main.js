@@ -20,7 +20,7 @@
     if(!navLinks.querySelector(".mobile-menu-cta")){
       var ctaLi = document.createElement("li");
       ctaLi.className = "mobile-menu-cta";
-      ctaLi.innerHTML = '<a class="btn btn--primary" href="contact.html">Devis gratuit <span class="arr">→</span></a>';
+      ctaLi.innerHTML = '<a class="btn btn--primary" href="/contact">Devis gratuit <span class="arr">→</span></a>';
       navLinks.appendChild(ctaLi);
     }
 
@@ -44,7 +44,19 @@
     });
 
     navLinks.querySelectorAll("a").forEach(function(a){
-      a.addEventListener("click", function(){
+      a.addEventListener("click", function(e){
+        // On mobile (< 992px), clicking dropdown toggle opens/closes the accordion without closing the menu drawer
+        if(a.classList.contains("nav-dropdown-toggle") || a.closest(".nav-dropdown-toggle")){
+          if(window.innerWidth < 992){
+            e.preventDefault();
+            e.stopPropagation();
+            var wrap = a.closest(".nav-dropdown-wrapper");
+            if(wrap){
+              wrap.classList.toggle("open");
+            }
+            return;
+          }
+        }
         closeMenu();
       });
     });
