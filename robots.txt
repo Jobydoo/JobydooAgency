@@ -2,6 +2,26 @@ User-agent: *
 Allow: /
 Sitemap: https://www.jobydooagency.com/sitemap.xml
 
+# AI & Generative Search Engines (GEO / AEO)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Private admin paths
 Disallow: /admin/
 Disallow: /wp-admin/
 Disallow: /cgi-bin/

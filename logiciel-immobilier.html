@@ -64,6 +64,42 @@
       font-weight: 700;
     }
   </style>
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "ImmoMaster™ Suite — Logiciel Agence Immobilière",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web, Windows, macOS, iOS, Android (PWA)",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.8",
+          "ratingCount": "17",
+          "bestRating": "5"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "MAD",
+          "description": "Gestion de portefeuille de biens, rapprochement acquéreurs et mandats sans abonnement"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.jobydooagency.com/"},
+          {"@type": "ListItem", "position": 2, "name": "Solutions Métiers", "item": "https://www.jobydooagency.com/solutions-metiers"},
+          {"@type": "ListItem", "position": 3, "name": "Logiciel Agence Immobilière", "item": "https://www.jobydooagency.com/logiciel-immobilier"}
+        ]
+      }
+    ]
+  }
+  </script>
+
 </head>
 <body class="antialiased bg-slate-50 text-slate-900 selection:bg-violet-600 selection:text-white">
 
