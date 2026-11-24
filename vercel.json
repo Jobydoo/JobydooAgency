@@ -4,6 +4,12 @@
   "outputDirectory": null,
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    { "source": "/terms-of-service", "destination": "/terms", "permanent": true },
+    { "source": "/cgu", "destination": "/terms", "permanent": true },
+    { "source": "/cgv", "destination": "/terms", "permanent": true },
+    { "source": "/en/terms-of-service", "destination": "/en/terms", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/assets/(css|js)/(.*)",
